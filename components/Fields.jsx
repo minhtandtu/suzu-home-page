@@ -4,7 +4,7 @@ import Image from 'next/image';
 const fields = [
   {
     name: 'Phương tiện & Nghệ Thuật',
-    img: '/FieldImage/Phuongtiennghethuat.svg',
+    img: '/FieldImage/PhuongtienNghethuat.svg',
   },
   {name: 'B2B', img: '/FieldImage/B2B.svg'},
   {name: 'Giải trí & Truyền thông', img: '/FieldImage/GiaitriTruyenthong.svg'},

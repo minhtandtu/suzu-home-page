@@ -10,9 +10,9 @@ const Hero = () => {
           {/* Không xóa thẻ div bên dưới */}
           <div className="container h-14 sm:py-16  md:h-20 md:py-24 lg:py-32"></div>
           <div className="container mx-auto flex items-center 2xl:max-w-7xl">
-            <div className="flex w-full flex-col-reverse  md:grid md:grid-cols-2 md:gap-x-4">
+            <div className="flex w-full flex-col-reverse  md:-mt-24 md:mb-6 md:grid md:grid-cols-2 md:gap-x-4">
               {/* Left Box */}
-              <div className="max-w-md sm:max-w-2xl  lg:flex lg:items-center lg:text-left ">
+              <div className="max-w-md sm:max-w-2xl lg:flex lg:items-center lg:text-left ">
                 <div className=" px-4">
                   {/* Hello  Suzu Group  section */}
                   <div className="md:mb-8">
@@ -53,7 +53,7 @@ const Hero = () => {
                 </div>
               </div>
               {/* Right Box */}
-              <div className="mx-auto ">
+              <div className="mx-auto py-12 px-8 md:py-0">
                 <img className="w-full object-cover" src="/motion.svg" alt="" />
               </div>
             </div>
