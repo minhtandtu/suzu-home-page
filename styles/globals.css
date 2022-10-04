@@ -1,26 +1,284 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .body {
+    @apply font-Inter;
   }
-  body {
-    color: white;
-    background: black;
+}
+@layer components {
+  .bd {
+    @apply border border-gray-600;
+  }
+  .bdd {
+    @apply border-2 border-red-500;
+  }
+  .splide__arrow {
+    @apply absolute top-1/2 z-10 -mx-10 flex h-14 w-14 items-center justify-center rounded  bg-white shadow-lg focus:ring-2 focus:ring-red-400 md:-mx-20;
+  }
+  .splide__arrow--next {
+    @apply right-8 md:-right-0 xl:-right-16;
+  }
+  .splide__arrow--prev {
+    @apply left-8 md:-left-0 xl:-left-16;
+  }
+  .splide__arrow svg {
+    @apply h-6 w-6 fill-slate-700;
+  }
+
+  .text-fill {
+    -webkit-text-fill-color: #e0e0e0;
+  }
+  .text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+  }
+  .text-fill-black {
+    -webkit-text-fill-color: #000;
+  }
+  .text-fill-white {
+    -webkit-text-fill-color: #fff;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke-color: #e0e0e0;
+  }
+  .text-stroke-transparent {
+    -webkit-text-stroke-color: transparent;
+  }
+  .text-stroke-black {
+    -webkit-text-stroke-color: #000;
+  }
+  .text-stroke-white {
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .text-stroke-red {
+    -webkit-text-stroke-color: #f04438;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .text-stroke-0 {
+    -webkit-text-stroke-width: 0;
+  }
+  .text-stroke-1 {
+    -webkit-text-stroke-width: 1px;
+  }
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+  .text-stroke-4 {
+    -webkit-text-stroke-width: 4px;
+  }
+  .text-stroke-8 {
+    -webkit-text-stroke-width: 8px;
+  }
+
+  .paint-fsm {
+    paint-order: fill stroke markers;
+  }
+  .paint-fms {
+    paint-order: fill markers stroke;
+  }
+  .paint-sfm {
+    paint-order: stroke fill markers;
+  }
+  .paint-smf {
+    paint-order: stroke markers fill;
+  }
+  .paint-mfs {
+    paint-order: markers fill stroke;
+  }
+  .paint-msf {
+    paint-order: markers stroke fill;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:text-fill {
+      -webkit-text-fill-color: #e0e0e0;
+    }
+    .sm\:text-fill-transparent {
+      -webkit-text-fill-color: transparent;
+    }
+    .sm\:text-fill-black {
+      -webkit-text-fill-color: #000;
+    }
+    .sm\:text-fill-white {
+      -webkit-text-fill-color: #fff;
+    }
+
+    .sm\:text-stroke {
+      -webkit-text-stroke-color: #e0e0e0;
+    }
+    .sm\:text-stroke-transparent {
+      -webkit-text-stroke-color: transparent;
+    }
+    .sm\:text-stroke-black {
+      -webkit-text-stroke-color: #000;
+    }
+    .sm\:text-stroke-white {
+      -webkit-text-stroke-color: #fff;
+    }
+
+    .sm\:text-stroke {
+      -webkit-text-stroke-width: 1px;
+    }
+    .sm\:text-stroke-0 {
+      -webkit-text-stroke-width: 0;
+    }
+    .sm\:text-stroke-2 {
+      -webkit-text-stroke-width: 2px;
+    }
+    .sm\:text-stroke-4 {
+      -webkit-text-stroke-width: 4px;
+    }
+    .sm\:text-stroke-8 {
+      -webkit-text-stroke-width: 8px;
+    }
+
+    .sm\:paint-fsm {
+      paint-order: fill stroke markers;
+    }
+    .sm\:paint-fms {
+      paint-order: fill markers stroke;
+    }
+    .sm\:paint-sfm {
+      paint-order: stroke fill markers;
+    }
+    .sm\:paint-smf {
+      paint-order: stroke markers fill;
+    }
+    .sm\:paint-mfs {
+      paint-order: markers fill stroke;
+    }
+    .sm\:paint-msf {
+      paint-order: markers stroke fill;
+    }
+  }
+}
+.text-fill-transparent {
+  -webkit-text-fill-color: transparent;
+}
+.text-fill-black {
+  -webkit-text-fill-color: #000;
+}
+.text-fill-white {
+  -webkit-text-fill-color: #fff;
+}
+.text-fill {
+  -webkit-text-fill-color: #e0e0e0;
+}
+
+.text-stroke-transparent {
+  -webkit-text-stroke-color: transparent;
+}
+.text-stroke-black {
+  -webkit-text-stroke-color: #000;
+}
+.text-stroke-white {
+  -webkit-text-stroke-color: #fff;
+}
+.text-stroke {
+  -webkit-text-stroke-color: #e0e0e0;
+}
+
+.text-stroke-0 {
+  -webkit-text-stroke-width: 0;
+}
+.text-stroke-2 {
+  -webkit-text-stroke-width: 2px;
+}
+.text-stroke-4 {
+  -webkit-text-stroke-width: 4px;
+}
+.text-stroke-8 {
+  -webkit-text-stroke-width: 8px;
+}
+.text-stroke {
+  -webkit-text-stroke-width: 1px;
+}
+
+.paint-fsm {
+  paint-order: fill stroke markers;
+}
+.paint-fms {
+  paint-order: fill markers stroke;
+}
+.paint-sfm {
+  paint-order: stroke fill markers;
+}
+.paint-smf {
+  paint-order: stroke markers fill;
+}
+.paint-mfs {
+  paint-order: markers fill stroke;
+}
+.paint-msf {
+  paint-order: markers stroke fill;
+}
+
+@media (min-width: 640px) {
+  .sm\:text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+  }
+  .sm\:text-fill-black {
+    -webkit-text-fill-color: #000;
+  }
+  .sm\:text-fill-white {
+    -webkit-text-fill-color: #fff;
+  }
+  .sm\:text-fill {
+    -webkit-text-fill-color: #e0e0e0;
+  }
+
+  .sm\:text-stroke-transparent {
+    -webkit-text-stroke-color: transparent;
+  }
+  .sm\:text-stroke-black {
+    -webkit-text-stroke-color: #000;
+  }
+  .sm\:text-stroke-white {
+    -webkit-text-stroke-color: #fff;
+  }
+  .sm\:text-stroke {
+    -webkit-text-stroke-color: #e0e0e0;
+  }
+
+  .sm\:text-stroke-0 {
+    -webkit-text-stroke-width: 0;
+  }
+  .sm\:text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+  .sm\:text-stroke-4 {
+    -webkit-text-stroke-width: 4px;
+  }
+  .sm\:text-stroke-8 {
+    -webkit-text-stroke-width: 8px;
+  }
+  .sm\:text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .sm\:paint-fsm {
+    paint-order: fill stroke markers;
+  }
+  .sm\:paint-fms {
+    paint-order: fill markers stroke;
+  }
+  .sm\:paint-sfm {
+    paint-order: stroke fill markers;
+  }
+  .sm\:paint-smf {
+    paint-order: stroke markers fill;
+  }
+  .sm\:paint-mfs {
+    paint-order: markers fill stroke;
+  }
+  .sm\:paint-msf {
+    paint-order: markers stroke fill;
   }
 }
