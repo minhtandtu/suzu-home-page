@@ -62,10 +62,10 @@ const OurProject = () => {
   return (
     <>
       <div className="relative ">
-        <div className="mx-auto max-w-[1530px] bg-gray-50  py-8 sm:py-16 md:py-24">
+        <div className="container mx-auto bg-gray-50  py-8 sm:py-16 md:py-24">
           <div className="px-4 md:px-1">
             {/* Dự án của chúng tôi  */}
-            <div className="container mx-auto flex justify-between lg:max-w-5xl xl:max-w-7xl">
+            <div className="mx-auto flex justify-between lg:max-w-5xl xl:max-w-7xl">
               <div className="">
                 <Title str1="DỰ ÁN" str2="CỦA CHÚNG TÔI" />
                 {/* DASH ---------- */}

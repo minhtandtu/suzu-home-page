@@ -15,6 +15,11 @@ module.exports = {
     'animate-bounce',
     'splide__arrow--next2',
     'splide__arrow--prev2',
+    'splide__pagination__page',
+    'splide__pagination',
+    'pagin',
+    'page',
+    'is-active',
   ],
   theme: {
     extend: {

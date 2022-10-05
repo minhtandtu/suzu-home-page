@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './Title';
 import Image from 'next/image';
 import '@splidejs/splide/css/core';
+// import '@splidejs/react-splide/css/sea-green';
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 const works = [
   {
@@ -27,10 +28,11 @@ const workSlides = [
   {name: 'software', img: '/WorkImage/Slide-software.svg'},
   {name: 'ad2', img: '/WorkImage/Slide-Ad.svg'},
 ];
+
 const Works = () => {
   return (
     <>
-      <div className="min-h-sc container mx-auto py-8 px-4 md:py-16 lg:py-24">
+      <div className="container mx-auto py-8 px-4 md:py-16 lg:py-24">
         <div className="mx-auto w-full max-w-7xl">
           {/* Big title */}
           <div className="mx-auto flex flex-col items-center justify-center">
@@ -59,7 +61,7 @@ const Works = () => {
             ))}
           </div>
           {/* Slider */}
-          <div className=" mt-9  flex items-center justify-center">
+          <div className="mt-9 flex items-center justify-center md:px-20">
             <Splide
               options={{
                 type: 'loop',

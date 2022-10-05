@@ -97,12 +97,9 @@ const Contact = [
 const Footer = () => {
   return (
     <>
-      <footer
-        className="mx-auto max-w-[1530px] bg-white"
-        aria-labelledby="footer-heading"
-      >
+      <footer className=" bg-white" aria-labelledby="footer-heading">
         <div className="container mx-auto px-4 py-12 lg:py-16 ">
-          <div className="grid gap-y-8 gap-x-8 sm:grid-cols-4">
+          <div className="mx-auto grid max-w-7xl gap-y-8 gap-x-8 sm:grid-cols-4">
             {/* Contact information */}
             <div className=" ">
               <img className="h-12" src="/logo.png" alt="Company name" />
@@ -171,8 +168,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" w-full  border-t border-gray-200 bg-gray-50">
-          <div className="mx-auto flex flex-col-reverse justify-between px-4 py-2 md:flex-row md:py-6">
+        <div className="border-t border-gray-200 bg-gray-50">
+          <div className="container mx-auto flex max-w-7xl flex-col-reverse justify-between px-4 py-2 md:flex-row md:py-6">
             <p className="text-base leading-10 text-gray-400 xl:text-center">
               &copy; 2022 SuZu Group. All rights reserved.
             </p>

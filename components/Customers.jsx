@@ -13,8 +13,8 @@ const Customers = () => {
   return (
     <>
       <div className="relative">
-        <div className="mx-auto w-full max-w-[1530px] bg-gray-50">
-          <div className="container mx-auto  px-4 py-8 sm:py-12">
+        <div className="container mx-auto w-full bg-gray-50">
+          <div className="mx-auto  px-4 py-8 sm:py-12">
             {/* partners logo */}
             <div className="mx-auto max-w-7xl rounded-lg bg-white p-6 shadow sm:p-10">
               <div className=" text-center">

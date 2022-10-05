@@ -93,7 +93,7 @@ const Header = () => {
     <>
       {/* Navigation Top Menu ----------------> */}
       <Popover as="header" className=" sticky top-0  z-50 ">
-        <div className="font-inter mx-auto  box-border bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
+        <div className="font-inter mx-auto box-border bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
           <nav
             className="container relative mx-auto flex items-center justify-between px-4 lg:px-8"
             aria-label="Global"
@@ -119,7 +119,7 @@ const Header = () => {
 
         <Transition
           as={Fragment}
-          enter="duration-500 ease-out"
+          enter="duration-100 ease-out"
           enterFrom="opacity-0 scale-50 "
           enterTo="opacity-100 scale-100"
           leave="duration-100 ease-in"
@@ -128,7 +128,7 @@ const Header = () => {
         >
           <Popover.Panel
             focus
-            className="absolute inset-x-0 top-0 z-30 mx-auto max-w-[1530px] origin-top transform px-2 transition "
+            className="absolute inset-x-0 top-0 z-30 mx-auto  origin-top transform px-2 transition "
           >
             <div className="mx-auto overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5 md:pb-8 lg:pb-16 ">
               <div className="container mx-auto xl:max-w-5xl 2xl:max-w-7xl">

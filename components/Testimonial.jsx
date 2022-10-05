@@ -33,28 +33,30 @@ const Testimonial = () => {
   return (
     <>
       {/* Testimonial section */}
-      <div className="mx-auto max-w-[1530px] bg-gray-50 py-8 sm:py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 md:px-0">
+      <div className="container mx-auto bg-gray-50 py-8 sm:py-16 md:py-24">
+        <div className="mx-auto px-4 md:px-0">
           {/* Đánh Giá Từ Khách Hàng */}
           <div className="flex flex-col items-center justify-center">
             <Title str1={'ĐÁNH GIÁ TỪ'} str2={'KHÁCH HÀNG'} />
           </div>
           {/* SLIDE */}
-          <div className="relative flex ">
-            {/* <div className="hidden h-96 rounded-lg md:block md:w-[40%] md:py-8 ">
-                <div className="h-full bg-white/50 pr-8 pt-10">
-                  <p className="text-right text-xl font-normal text-gray-900/50">
-                    customer support. We
-                  </p>
-                </div>
-              </div> */}
-            <div className="w-full">
+          <div className="relative flex flex-col  justify-between px-4 md:flex-row md:px-0">
+            <div className="hidden h-96 w-[15%] rounded-lg py-8 md:block ">
+              <div className="h-full bg-white/50 pr-8 pt-10 ">
+                <p className="text-right text-xl font-normal text-gray-900/50">
+                  customer support. We
+                </p>
+              </div>
+            </div>
+            <div className="page w-full md:max-w-[70%]">
               <Splide
                 options={{
                   type: 'loop',
-                  padding: '15rem',
-                  breakpoints: {
-                    1024: {padding: '0rem'},
+                  // padding: '15rem',
+
+                  classes: {
+                    pagination: 'splide__pagination pagin',
+                    page: 'splide__pagination__page page',
                   },
                 }}
                 aria-label="My Favorite Images"
@@ -64,15 +66,16 @@ const Testimonial = () => {
                     <TestimonialItem item={item} />
                   </SplideSlide>
                 ))}
+                {/* <ul className="splide__pagination relative z-50 h-96 w-96 bg-red-300"></ul> */}
               </Splide>
             </div>
-            {/* <div className="hidden h-96 w-[40%] rounded-lg py-8 md:block ">
-                <div className="h-full bg-white/50 pl-8 pt-10">
-                  <p className="text-left text-xl font-normal text-gray-900/50">
-                    Love the simplicit
-                  </p>
-                </div>
-              </div> */}
+            <div className="hidden h-96 w-[15%] rounded-lg py-8 md:block ">
+              <div className="h-full bg-white/50 pl-8 pt-10">
+                <p className="text-left text-xl font-normal text-gray-900/50">
+                  Love the simplicit
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

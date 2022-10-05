@@ -152,8 +152,8 @@ const TeamBranch = () => {
 
               <div className="w-full">
                 <Link href="#">
-                  <div className="flex cursor-pointer items-center justify-center rounded-lg border border-gray-300 bg-white px-1 transition duration-500 hover:bg-gray-300">
-                    <a className="py-4 text-sm font-medium lg:text-lg">
+                  <div className="group  flex cursor-pointer items-center justify-center rounded-lg border border-red-500 bg-white px-1 text-red-500 transition duration-500 hover:bg-gray-100 ">
+                    <a className="py-4 text-sm font-medium group-hover:text-gray-900 lg:text-lg">
                       KHÁM PHÁ ĐỘI NGŨ CỦA CHÚNG TÔI &rarr;
                     </a>
                   </div>

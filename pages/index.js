@@ -13,7 +13,7 @@ import Blog from '../components/Blog';
 export default function Home() {
   return (
     <>
-      <NextSeo title="SuZu Group" description="welcome to suzu group....." />
+      <NextSeo title="SuZu Group" description="Xelcome to suzu group....." />
       <div className="relative bg-white ">
         {/* Navigation Top Menu ----------------> */}
         <Header />

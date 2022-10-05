@@ -62,12 +62,12 @@ const Blog = () => {
   return (
     <>
       {/* Blog section */}
-      <div className="mx-auto max-w-[1530px] py-8 px-4 sm:py-16 lg:py-24">
-        <div className="container mx-auto">
+      <div className="container mx-auto  py-8 px-4 sm:py-16 lg:py-24">
+        <div className=" mx-auto">
           <div className="flex flex-col items-center justify-center">
             <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
           </div>
-          <div className="mx-auto grid gap-4 md:grid-cols-3">
+          <div className="mx-auto grid gap-4 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <div
                 key={post.id}
@@ -126,8 +126,8 @@ const Blog = () => {
           {/* Button */}
           <div className="md:flex md:justify-center">
             <Link href={'/'}>
-              <div className="mt-10 cursor-pointer  rounded-lg border border-red-500 bg-white px-4 py-2 text-center text-red-500">
-                <p className="text-base font-medium">
+              <div className="group mt-7 cursor-pointer rounded-lg border border-red-500 bg-white px-4 py-2 text-center text-red-500 transition duration-500 hover:bg-red-200 md:mt-10">
+                <p className="text-base font-medium group-hover:text-red-900">
                   XEM THÊM BÀI VIẾT &rarr;
                 </p>
               </div>
