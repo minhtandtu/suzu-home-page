@@ -13,6 +13,8 @@ module.exports = {
     'splide__arrow--prev',
     'splide__arrow svg',
     'animate-bounce',
+    'splide__arrow--next2',
+    'splide__arrow--prev2',
   ],
   theme: {
     extend: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import Image from 'next/image';
-import '@splidejs/splide/css/sea-green';
+import '@splidejs/splide/css/core';
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 const works = [
   {
@@ -30,7 +30,7 @@ const workSlides = [
 const Works = () => {
   return (
     <>
-      <div className="container mx-auto py-8 px-4 md:py-16 lg:py-24">
+      <div className="min-h-sc container mx-auto py-8 px-4 md:py-16 lg:py-24">
         <div className="mx-auto w-full max-w-7xl">
           {/* Big title */}
           <div className="mx-auto flex flex-col items-center justify-center">
@@ -52,14 +52,14 @@ const Works = () => {
                 <p className=" text-xl font-semibold text-gray-900 md:text-3xl">
                   {item.name}
                 </p>
-                <p className=" text-sm font-normal text-gray-700 md:text-lg">
+                <p className=" text-sm font-normal text-gray-700 md:text-base">
                   {item.des}
                 </p>
               </div>
             ))}
           </div>
           {/* Slider */}
-          <div className=" flex  items-center justify-center">
+          <div className=" mt-9  flex items-center justify-center">
             <Splide
               options={{
                 type: 'loop',
@@ -70,6 +70,10 @@ const Works = () => {
                   768: {perPage: 2, gap: '1rem'},
                   640: {perPage: 1, gap: 0},
                   380: {perPage: 1, gap: 0},
+                },
+                classes: {
+                  prev: 'splide__arrow--prev work-prev',
+                  next: 'splide__arrow--next work-next',
                 },
               }}
               aria-label="My Favorite Images2"

@@ -92,8 +92,8 @@ const Header = () => {
   return (
     <>
       {/* Navigation Top Menu ----------------> */}
-      <Popover as="header" className=" relative  ">
-        <div className="font-inter fixed left-0 right-0 z-20 mx-auto  box-border max-w-[1530px]  bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
+      <Popover as="header" className=" sticky top-0  z-50 ">
+        <div className="font-inter mx-auto  box-border bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
           <nav
             className="container relative mx-auto flex items-center justify-between px-4 lg:px-8"
             aria-label="Global"
@@ -157,13 +157,13 @@ const Header = () => {
                       {navigation.map((item) => (
                         <div key={item.name} className="cursor-pointer">
                           <Link href={item.href}>
-                            <div className="group flex items-center ">
-                              <div className="hidden group-hover:block">
+                            <div className="group flex  items-center">
+                              <div className="-translate-x-9 opacity-0 transition-all group-hover:translate-x-5 group-hover:opacity-100 group-hover:delay-75 group-hover:duration-500">
                                 <p className="text-stroke-1 text-stroke-black px-4 text-xl font-semibold text-white">
                                   {item.id}
                                 </p>
                               </div>
-                              <div className="cursor-pointer group-hover:translate-x-5 group-hover:transition group-hover:duration-500 ">
+                              <div className=" -translate-x-9 cursor-pointer transition-all ease-in-out group-hover:translate-x-5 group-hover:duration-500">
                                 <a className="block rounded-md px-4 py-2 text-4xl font-semibold leading-10 text-gray-900 md:px-0">
                                   {item.name}
                                 </a>

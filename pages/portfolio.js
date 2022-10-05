@@ -17,26 +17,7 @@ export default function Home() {
       <div className="relative bg-white ">
         {/* Navigation Top Menu ----------------> */}
         <Header />
-        <main>
-          {/* HERO SECTION*/}
-          <Hero />
-          {/* CUSTOMER LOGO */}
-          <Customers />
-          {/*OUR PROJECTS - DỰ ÁN CỦA CHÚNG TÔI */}
-          <OurProject />
-          {/* WORKS - CHÚNG TÔI LÀM GÌ */}
-          <Works />
-          {/* FIELDS - LĨNH VỰC HOẠT ĐỘNG */}
-          <Fields />
-          {/* TEAM BRANCH - ĐỘI NGŨ CỦA CHÚNG TÔI */}
-          <TeamBranch />
-          {/*TESTIMONIAL - ĐÁNH GIÁ TỪ KHÁCH HÀNG*/}
-          <Testimonial />
-          {/* BLOG - TIN TỨC */}
-          <Blog />
-          {/*LIÊN HỆ NGAY + LOGO*/}
-          <ContactUsNow />
-        </main>
+        <main></main>
         <Footer />
       </div>
     </>
