@@ -1,15 +1,15 @@
-import Hero from '../components/Hero';
-import Testimonial from '../components/Testimonial';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Customers from '../components/Customers';
-import OurProject from '../components/OurProject';
+import Hero from '../components/home/Hero';
+import Testimonial from '../components/home/Testimonial';
+import Footer from '../components/shared/Footer';
+import Header from '../components/shared/Header';
+import Customers from '../components/home/Customers';
+import OurProject from '../components/home/OurProject';
 import {NextSeo} from 'next-seo';
-import TeamBranch from '../components/TeamBranch';
-import ContactUsNow from '../components/ContactUsNow';
-import Works from '../components/Works';
-import Fields from '../components/Fields';
-import Blog from '../components/Blog';
+import TeamBranch from '../components/home/TeamBranch';
+import ContactUsNow from '../components/shared/ContactUsNow';
+import Works from '../components/home/Works';
+import Fields from '../components/home/Fields';
+import Blog from '../components/home/Blog';
 export default function Home() {
   return (
     <>
