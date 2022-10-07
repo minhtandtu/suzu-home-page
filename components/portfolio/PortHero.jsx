@@ -41,22 +41,22 @@ const logo = [
     alt: 'Statamic',
   },
   {
-    name: '1',
+    name: '7',
     imgUrl: 'https://tailwindui.com/img/logos/transistor-logo-gray-400.svg',
     alt: 'Workcation',
   },
-  {name: 'brain', imgUrl: '/Logo/logoLava.png', alt: 'logo'},
+  {name: '10', imgUrl: '/Logo/logoLava.png', alt: 'logo'},
   {name: 'brain', imgUrl: '/Logo/logoBrainad.png', alt: 'logo'},
   {
-    name: '2',
+    name: '8',
     imgUrl: 'https://tailwindui.com/img/logos/mirage-logo-gray-400.svg',
     alt: 'Mirage',
   },
 ];
 export const PortHero = () => {
   return (
-    <div className="container mx-auto px-4 py-4">
-      <div className="mx-auto grid max-w-7xl md:grid-cols-12 md:gap-4">
+    <div className=" mx-auto px-4 py-4">
+      <div className="container mx-auto grid max-w-7xl md:grid-cols-12 md:gap-4">
         {/* Text Section */}
         <div className="py-8 md:col-span-7 md:py-16 lg:py-24 ">
           <div className="flex flex-col justify-center">
@@ -69,9 +69,9 @@ export const PortHero = () => {
         </div>
         {/* Logo Section */}
         <div className="md:col-span-5">
-          <div class="relative flow-root">
-            <div class="scrollbar-hide relative mx-auto box-content h-96 overflow-y-auto md:h-[31rem]">
-              <div class="absolute inset-x-0 mt-6 grid grid-cols-2  gap-4  lg:mt-8">
+          <div className="relative flow-root">
+            <div className="scrollbar-hide relative mx-auto box-content h-96 overflow-y-auto md:h-[31rem]">
+              <div className="absolute inset-x-0 mt-6 grid grid-cols-2  gap-4  lg:mt-8">
                 {logo.map((item) => (
                   <div className="w-full even:mt-8" key={item.name}>
                     <img

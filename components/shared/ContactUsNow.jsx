@@ -13,8 +13,8 @@ const logo = [
 const ContactUsNow = () => {
   return (
     <>
-      <div className="container mx-auto bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl  ">
+      <div className=" mx-auto bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
+        <div className="container mx-auto  max-w-7xl">
           <div className=" mx-auto  p-3 md:rounded-lg md:bg-white md:p-12 md:shadow-xl ">
             <div className="  md:grid md:grid-cols-2 md:gap-8 ">
               {/* Text + Button */}

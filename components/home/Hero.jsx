@@ -4,12 +4,12 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section*/}
-      <div className="bg-net container mx-auto">
-        <div className="mx-auto ">
+      <div className="bg-net mx-auto">
+        <div className="container mx-auto ">
           {/*spaceholder for top menu */}
           {/* Không xóa thẻ div bên dưới */}
           <div className="h-14 sm:py-16  md:h-20 md:py-24 lg:py-32"></div>
-          <div className="mx-auto flex items-center 2xl:max-w-7xl">
+          <div className="mx-auto flex items-center ">
             <div className="flex w-full flex-col-reverse  md:-mt-24 md:mb-6 md:grid md:grid-cols-2 md:gap-x-4">
               {/* Left Box */}
               <div className="max-w-md sm:max-w-2xl lg:flex lg:items-center lg:text-left ">
@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Truot xuong + bouncing arrow oval box */}
-        <div className="relative mx-auto w-full max-w-[1530px]">
+        <div className="relative mx-auto w-full">
           <div className="relative flex h-full w-full flex-col md:justify-start">
             <img className="z-10 w-full " src="/oval.svg" alt="" />
             <div className="absolute top-8 left-0 z-20 mx-auto flex w-full flex-col md:top-14">

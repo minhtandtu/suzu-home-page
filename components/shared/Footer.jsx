@@ -1,25 +1,25 @@
 import React from 'react';
 const footerNavigation = {
   suzugroup: [
-    {name: 'Về chúng tôi', href: '#', id: 1},
-    {name: 'Tuyển dụng', href: '#', id: 2},
-    {name: 'Blog', href: '#', id: 3},
-    {name: 'Trung tâm trợ giúp', href: '#', id: 4},
-    {name: 'Liên hệ', href: '#', id: 5},
+    {name: 'Về chúng tôi', href: '#'},
+    {name: 'Tuyển dụng', href: '#'},
+    {name: 'Blog', href: '#'},
+    {name: 'Trung tâm trợ giúp', href: '#'},
+    {name: 'Liên hệ', href: '#'},
   ],
   lienketnhanh: [
-    {name: 'Trang chủ', href: '#', id: 1},
-    {name: 'Dự án', href: '#', id: 2},
-    {name: 'Dịch vụ', href: '#', id: 3},
-    {name: 'Đội ngũ', href: '#', id: 4},
-    {name: 'Khách hàng', href: '#', id: 5},
+    {name: 'Trang chủ', href: '#'},
+    {name: 'Dự án', href: '#'},
+    {name: 'Dịch vụ', href: '#'},
+    {name: 'Đội ngũ', href: '#'},
+    {name: 'Khách hàng', href: '#'},
   ],
   doingucuachungtoi: [
-    {name: 'Studio', href: '#', id: 1},
-    {name: 'Brand', href: '#', id: 2},
-    {name: 'Music', href: '#', id: 3},
-    {name: 'Social film', href: '#', id: 4},
-    {name: 'Bamboo ads', href: '#', id: 5},
+    {name: 'Studio', href: '#'},
+    {name: 'Brand', href: '#'},
+    {name: 'Music', href: '#'},
+    {name: 'Social film', href: '#'},
+    {name: 'Bamboo ads', href: '#'},
   ],
   social: [
     {
@@ -94,6 +94,7 @@ const Contact = [
       '265/40 Nơ Trang Long, Phường 11, Quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam',
   },
 ];
+
 const Footer = () => {
   return (
     <>
@@ -104,9 +105,9 @@ const Footer = () => {
             <div className=" ">
               <img className="h-12" src="/logo.png" alt="Company name" />
               <div className="mt-auto  ">
-                {Contact.map((contact) => (
+                {Contact.map((contact, index) => (
                   <p
-                    key={contact.id}
+                    key={index}
                     className="mt-4 text-base font-normal text-gray-500"
                   >
                     {contact.property} : {contact.content}
@@ -119,8 +120,8 @@ const Footer = () => {
                 SuZu Group
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.suzugroup.map((item) => (
-                  <li key={item.name}>
+                {footerNavigation.suzugroup.map((item, index) => (
+                  <li key={index}>
                     <a
                       href={item.href}
                       className="text-base text-gray-500 hover:text-gray-900"
@@ -136,8 +137,8 @@ const Footer = () => {
                 Liên kết nhanh
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.lienketnhanh.map((item) => (
-                  <li key={item.name}>
+                {footerNavigation.lienketnhanh.map((item, index) => (
+                  <li key={index}>
                     <a
                       href={item.href}
                       className="text-base text-gray-500 hover:text-gray-900"
@@ -153,8 +154,8 @@ const Footer = () => {
                 Đội ngũ của chúng tôi
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.doingucuachungtoi.map((item) => (
-                  <li key={item.name}>
+                {footerNavigation.doingucuachungtoi.map((item, index) => (
+                  <li key={index}>
                     <a
                       href={item.href}
                       className="text-base text-gray-500 hover:text-gray-900"
@@ -174,9 +175,9 @@ const Footer = () => {
               &copy; 2022 SuZu Group. All rights reserved.
             </p>
             <div className=" flex space-x-6   ">
-              {footerNavigation.social.map((item) => (
+              {footerNavigation.social.map((item, index) => (
                 <a
-                  key={item.id}
+                  key={index}
                   href={item.href}
                   className="text-gray-400 hover:text-gray-500"
                 >

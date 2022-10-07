@@ -32,8 +32,8 @@ const workSlides = [
 const Works = () => {
   return (
     <>
-      <div className="container mx-auto py-8 px-4 md:py-16 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto py-8 px-4 md:py-16 lg:py-24">
+        <div className="container mx-auto w-full max-w-7xl">
           {/* Big title */}
           <div className="mx-auto flex flex-col items-center justify-center">
             <Title str1={'CHÚNG TÔI'} str2={'LÀM GÌ'} />

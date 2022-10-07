@@ -62,8 +62,8 @@ const Blog = () => {
   return (
     <>
       {/* Blog section */}
-      <div className="container mx-auto  py-8 px-4 sm:py-16 lg:py-24">
-        <div className=" mx-auto">
+      <div className="mx-auto  py-8 px-4 sm:py-16 lg:py-24">
+        <div className="container mx-auto">
           <div className="flex flex-col items-center justify-center">
             <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
           </div>

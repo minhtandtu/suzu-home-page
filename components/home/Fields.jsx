@@ -15,8 +15,8 @@ const fields = [
 const Fields = () => {
   return (
     <>
-      <div className="container mx-auto  py-8 px-4 md:py-16 lg:py-24">
-        <div className="mx-auto flex flex-col items-center justify-center">
+      <div className="mx-auto  py-8 px-4 md:py-16 lg:py-24">
+        <div className="container mx-auto flex flex-col items-center justify-center">
           {/* Big Title */}
           <Title str1={'LĨNH VỰC'} str2="HOẠT ĐỘNG" />
           <div className="grid w-full space-x-4 space-y-4 md:grid-cols-3">

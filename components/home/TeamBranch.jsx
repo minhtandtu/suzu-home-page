@@ -93,8 +93,8 @@ const linhvuc = [
 const TeamBranch = () => {
   return (
     <>
-      <div className="container mx-auto px-4 py-8 sm:py-16 md:py-24">
-        <div className="mx-auto max-w-7xl  ">
+      <div className="mx-auto px-4 py-8 sm:py-16 md:py-24">
+        <div className="container mx-auto max-w-7xl  ">
           <Title str1={'ĐỘI NGŨ'} str2={'CỦA CHÚNG TÔI'} />
           {/* TEAM BRANCH CONTENT */}
           <div className="grid gap-4 md:grid-cols-10">
