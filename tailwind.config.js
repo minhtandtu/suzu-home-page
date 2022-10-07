@@ -72,5 +72,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-text-fill-stroke'), // no options to configure
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar-hide'),
   ],
 };
