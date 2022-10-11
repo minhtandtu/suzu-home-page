@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const ServiceInfo = () => {
   return (
-    <div className="space-y-4 bg-gray-50 px-4 py-16 md:space-y-8  md:py-24 lg:py-32 ">
+    <div className="space-y-4 bg-gray-50 px-4 py-16 md:space-y-8 md:py-24 lg:py-32">
       <img
         src="/Service/fullwidthimage.png"
         className=" relative mx-auto  object-cover"

@@ -126,8 +126,8 @@ const TeamInfo = () => {
             <div className="lg:flex lg:w-1/2 lg:items-center lg:justify-center">
               <div className="relative h-[80%] w-full ">
                 <div
-                  className="inset-y-0 right-0 w-full rounded-lg bg-white/80 backdrop-blur group-odd:-left-[10%] group-even:-right-[10%]  lg:absolute lg:rounded-lg lg:border
-                 lg:border-gray-100 lg:py-1 lg:pl-4 lg:shadow-xl xl:p-8 "
+                  className="inset-y-0 right-0 w-full rounded-lg bg-gray-50 backdrop-blur group-odd:-left-[10%] group-even:-right-[10%] lg:absolute  lg:rounded-lg lg:border lg:border-gray-100
+                 lg:bg-white/80 lg:py-1 lg:pl-4 lg:shadow-xl xl:p-8 "
                 >
                   <div className="flex h-full flex-col justify-between space-y-4 lg:space-y-1 xl:space-y-4 ">
                     <div className="lg:flex  ">
@@ -146,42 +146,42 @@ const TeamInfo = () => {
                       </div>
                     </div>
                     {/*  */}
-                    <p className="ptick">
-                      <div className="circletick">
+                    <div className="flex items-center">
+                      <div className="mr-2 rounded-full bg-red-100 p-2">
                         <img
                           src="/Icon/tick.svg"
                           className="h-2 object-cover lg:h-3"
                         ></img>
                       </div>
-                      {item.major1}
-                    </p>
-                    <p className="ptick">
-                      <div className="circletick">
+                      <p>{item.major1}</p>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="mr-2 rounded-full bg-red-100 p-2">
                         <img
                           src="/Icon/tick.svg"
                           className="h-2 object-cover lg:h-3"
                         ></img>
                       </div>
-                      {item.major2}
-                    </p>
-                    <p className="ptick">
-                      <div className="circletick">
+                      <p>{item.major2}</p>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="mr-2 rounded-full bg-red-100 p-2">
                         <img
                           src="/Icon/tick.svg"
                           className="h-2 object-cover lg:h-3"
                         ></img>
                       </div>
-                      {item.major3}
-                    </p>
-                    <p className="ptick">
-                      <div className="circletick">
+                      <p>{item.major3}</p>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="mr-2 rounded-full bg-red-100 p-2">
                         <img
                           src="/Icon/tick.svg"
                           className="h-2 object-cover lg:h-3"
                         ></img>
                       </div>
-                      {item.major4}
-                    </p>
+                      <p>{item.major4}</p>
+                    </div>
 
                     <div className="pb-4">
                       <Link href="/">

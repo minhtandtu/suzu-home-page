@@ -49,13 +49,13 @@
     @apply h-2 w-11 rounded bg-red-700;
   }
   .btn-gray {
-    @apply inline-flex cursor-pointer rounded-lg border border-gray-300 bg-white text-sm text-gray-700 md:text-base;
+    @apply inline-flex cursor-pointer rounded-lg border border-gray-300 bg-white text-sm text-gray-700 transition duration-500 hover:bg-red-200 md:text-base;
   }
   .btn-gray p {
     @apply flex px-8 py-2;
   }
   .btn-red {
-    @apply inline-flex cursor-pointer rounded-lg bg-red-500 text-sm font-medium text-white md:text-base;
+    @apply inline-flex cursor-pointer rounded-lg bg-red-500 text-sm font-medium text-white transition duration-500 hover:bg-red-700 md:text-base;
   }
   .btn-red p {
     @apply flex px-4 py-2;

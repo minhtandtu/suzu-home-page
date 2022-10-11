@@ -104,22 +104,35 @@ const ServiceOurFields = () => {
             <p className="text-2xl font-normal text-gray-900 md:text-4xl">
               Định hình cho ý tưởng, sản phẩm và thương hiệu của bạn
             </p>
-            <Link href="/portfolio">
-              <div className="inline-flex  cursor-pointer rounded-lg border border-gray-300 bg-white ">
-                <a className="mx-8 flex py-2 text-sm text-gray-700 md:text-base">
-                  XEM DỰ ÁN CỦA CHÚNG TÔI
-                  <ArrowRightIcon className="my-2 ml-2 h-5 -rotate-45 md:h-7" />
-                </a>
-              </div>
-            </Link>
-          </div>
-          <div className="h-96 border-t  border-t-black md:w-1/3">
-            {Fields.map((item) => (
-              <Link href={item.href} key={item.name}>
-                <a className="flex justify-between border-b border-black py-6 text-xl font-semibold text-gray-700 md:text-3xl">
-                  {item.name}
-                </a>
+            <div className="pb-4">
+              <Link href="/portfolio">
+                <div className="btn-gray whitespace-nowrap">
+                  <p>
+                    XEM DỰ ÁN CỦA CHÚNG TÔI
+                    <ArrowRightIcon className="h-6 -rotate-45 pl-2 md:h-7 " />
+                  </p>
+                </div>
               </Link>
+            </div>
+          </div>
+          <div className="border-t  border-t-black md:w-1/3">
+            {Fields.map((item) => (
+              <div
+                key={item.name}
+                className="group flex items-center justify-between border-b border-black  "
+              >
+                <Link href={item.href}>
+                  <a className="flex justify-between py-6 text-xl font-semibold text-gray-700 transition duration-300 group-hover:text-red-500  md:text-3xl">
+                    {item.name}
+                  </a>
+                </Link>
+                <div className="">
+                  {' '}
+                  <p className="flex aspect-square h-full items-center rounded-lg p-4   transition duration-500  group-hover:bg-red-500">
+                    <ArrowRightIcon className="h-6 -rotate-45   pl-2 text-gray-500 transition duration-500 group-hover:text-white  md:h-7" />
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
