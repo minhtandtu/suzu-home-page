@@ -8,16 +8,16 @@ const Hero = () => {
         <div className="container mx-auto ">
           {/*spaceholder for top menu */}
           {/* Không xóa thẻ div bên dưới */}
-          <div className="h-14 sm:py-16  md:h-20 md:py-24 lg:py-32"></div>
+          <div className="h-8 sm:py-16  md:h-20 md:py-24 lg:py-32"></div>
           <div className="mx-auto flex items-center ">
             <div className="flex w-full flex-col-reverse  md:-mt-24 md:mb-6 md:grid md:grid-cols-2 md:gap-x-4">
               {/* Left Box */}
               <div className="max-w-md sm:max-w-2xl lg:flex lg:items-center lg:text-left ">
-                <div className=" px-4">
+                <div className="px-4 pb-4">
                   {/* Hello  Suzu Group  section */}
                   <div className="md:mb-8">
-                    <div className=" text-left md:mb-8">
-                      <p className=" text-2xl font-semibold leading-3 text-gray-700 md:text-3xl ">
+                    <div className="text-left md:mb-8">
+                      <p className="text-2xl font-semibold leading-3 text-gray-700 md:text-3xl ">
                         Chúng tôi là
                       </p>
                     </div>
@@ -34,7 +34,7 @@ const Hero = () => {
                   </div>
 
                   {/* Description  */}
-                  <div className="w-full">
+                  <div className="w-full ">
                     <p className="text-left  text-sm font-normal text-gray-900 md:text-xl  lg:w-[90%]">
                       Elementum sociis aliquet neque, fames est amet, posuere
                       tincidunt nunc in amet, tristique in a nulla viverra

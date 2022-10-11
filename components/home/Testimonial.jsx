@@ -34,22 +34,23 @@ const Testimonial = () => {
     <>
       {/* Testimonial section */}
       <div className="bg-gray-50">
-        <div className="container mx-auto  py-8 sm:py-16 md:py-24">
+        <div className=" mx-auto  py-8 sm:py-16 md:py-24">
           <div className="mx-auto px-4 md:px-0">
             {/* Đánh Giá Từ Khách Hàng */}
             <div className="flex flex-col items-center justify-center">
               <Title str1={'ĐÁNH GIÁ TỪ'} str2={'KHÁCH HÀNG'} />
             </div>
             {/* SLIDE */}
-            <div className="relative flex flex-col  justify-between px-4 md:flex-row md:px-0">
-              <div className="hidden h-96 w-[15%] rounded-lg py-8 md:block ">
+            <div className="relative flex w-full justify-between px-8 md:px-0">
+              <div className="hidden h-96 rounded-lg py-8 pr-12 md:block">
                 <div className="h-full bg-white/50 pr-8 pt-10 ">
-                  <p className="text-right text-xl font-normal text-gray-900/50">
-                    customer support. We
+                  <p className="text-center text-xl font-normal text-gray-900/50">
+                    Love the simplicity of the service and the prompt customer
+                    support. We cant imagine working without it.
                   </p>
                 </div>
               </div>
-              <div className="page w-full md:max-w-[70%]">
+              <div className="page w-full md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
                 <Splide
                   options={{
                     type: 'loop',
@@ -70,10 +71,11 @@ const Testimonial = () => {
                   {/* <ul className="splide__pagination relative z-50 h-96 w-96 bg-red-300"></ul> */}
                 </Splide>
               </div>
-              <div className="hidden h-96 w-[15%] rounded-lg py-8 md:block ">
+              <div className="hidden h-96 rounded-lg py-8 pl-12 md:block ">
                 <div className="h-full bg-white/50 pl-8 pt-10">
-                  <p className="text-left text-xl font-normal text-gray-900/50">
-                    Love the simplicit
+                  <p className="text-center text-xl font-normal text-gray-900/50">
+                    Love the simplicity of the service and the prompt customer
+                    support. We cant imagine working without it.
                   </p>
                 </div>
               </div>

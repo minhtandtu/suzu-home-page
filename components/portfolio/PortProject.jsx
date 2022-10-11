@@ -1,9 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {ChevronRightIcon, HomeIcon} from '@heroicons/react/solid';
-import {useState} from 'react';
-import {CheckIcon, ChevronDownIcon} from '@heroicons/react/solid';
-import {Combobox} from '@headlessui/react';
+import {ChevronRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
 import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
 const pages = [

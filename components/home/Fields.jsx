@@ -3,7 +3,7 @@ import Title from '../shared/Title';
 import Image from 'next/image';
 const fields = [
   {
-    name: 'Phương tiện & Nghệ Thuật',
+    name: 'Phương tiện & Nghệ Thuật ',
     img: '/FieldImage/PhuongtienNgheThuat.svg',
   },
   {name: 'B2B', img: '/FieldImage/B2B.svg'},
@@ -15,15 +15,15 @@ const fields = [
 const Fields = () => {
   return (
     <>
-      <div className="mx-auto  py-8 px-4 md:py-16 lg:py-24">
-        <div className="container mx-auto flex flex-col items-center justify-center">
+      <div className="mx-auto py-8 px-4 md:py-16 lg:py-24">
+        <div className="container mx-auto flex max-w-7xl flex-col items-center justify-center">
           {/* Big Title */}
           <Title str1={'LĨNH VỰC'} str2="HOẠT ĐỘNG" />
-          <div className="grid w-full space-x-4 space-y-4 md:grid-cols-3">
+          <div className="grid w-full gap-4 md:grid-cols-3">
             {fields.map((item) => (
               <div
                 key={item.name}
-                className="flex flex-col items-center justify-center space-y-4"
+                className="mx-auto flex flex-col items-center justify-center"
               >
                 <Image
                   key={item.name}

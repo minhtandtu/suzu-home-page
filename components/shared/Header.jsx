@@ -6,13 +6,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 const navigation = [
   {name: 'Dự án', href: '/portfolio', id: '01'},
-  {name: 'Dịch vụ', href: '#', id: '02'},
-  {name: 'Đội ngũ', href: '#', id: '03'},
-  {name: 'Khách hàng', href: '#', id: '04'},
-  {name: 'Blogs', href: '#', id: '05'},
-  {name: 'Tuyển dụng', href: '#', id: '06'},
-  {name: 'Về chúng tôi', href: '#', id: '07'},
-  {name: 'Liên hệ', href: '#', id: '08'},
+  {name: 'Dịch vụ', href: '/service', id: '02'},
+  {name: 'Đội ngũ', href: '/ourteam', id: '03'},
+  {name: 'Khách hàng', href: '/ourcustomer', id: '04'},
+  {name: 'Blogs', href: '/blog', id: '05'},
+  {name: 'Tuyển dụng', href: '/tuyendung', id: '06'},
+  {name: 'Về chúng tôi', href: '/aboutus', id: '07'},
+  {name: 'Liên hệ', href: '/contact', id: '08'},
 ];
 const socialLogo = {
   social: [
@@ -99,10 +99,12 @@ const Header = () => {
             aria-label="Global"
           >
             <div className=" flex items-center">
-              <a href="#">
-                <span className="sr-only">Your Company Logo</span>
-                <img className="h-8 w-auto sm:h-10" src="/logo.png" alt="" />
-              </a>
+              <Link href="/">
+                <a>
+                  <span className="sr-only">Your Company Logo</span>
+                  <img className="h-8 w-auto sm:h-10" src="/logo.png" alt="" />
+                </a>
+              </Link>
             </div>
 
             <div className="-mr-2 flex items-center  ">
@@ -133,9 +135,13 @@ const Header = () => {
             <div className="mx-auto overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5 md:pb-8 lg:pb-16 ">
               <div className="container mx-auto xl:max-w-5xl 2xl:max-w-7xl">
                 <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 md:border-0 md:px-0">
-                  <div>
-                    <img className="h-12 w-auto" src="logo.png" alt="" />
-                  </div>
+                  <Link href="/">
+                    <img
+                      className="h-12 w-auto cursor-pointer"
+                      src="logo.png"
+                      alt=""
+                    />
+                  </Link>
                   <div className="-mr-2">
                     <Popover.Button
                       className="focus-ring-inset inline-flex items-center justify-center gap-2  
@@ -148,7 +154,7 @@ const Header = () => {
                 </div>
                 <div className="w-full pt-10 pb-4 md:flex md:justify-between md:pt-0">
                   <div className="w-full pt-5 pb-6">
-                    <div className="space-y-1 px-2 md:px-0">
+                    <div className="cursor-pointer space-y-1 px-2 md:px-0">
                       <Link href="/">
                         <p className="inline-flex cursor-pointer border-b-2 border-red-500 px-4 text-4xl font-semibold leading-10 text-red-500 ">
                           Trang chủ

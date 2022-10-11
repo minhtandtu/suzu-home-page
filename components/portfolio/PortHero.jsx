@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../shared/Title';
+import TitleNoDash from '../shared/TitleNoDash';
 import Image from 'next/image';
 const logo = [
   {
@@ -59,8 +59,8 @@ export const PortHero = () => {
       <div className="container mx-auto grid max-w-7xl md:grid-cols-12 md:gap-4">
         {/* Text Section */}
         <div className="py-8 md:col-span-7 md:py-16 lg:py-24 ">
-          <div className="flex flex-col justify-center">
-            <Title str1={'DỰ ÁN'} str2="CỦA CHÚNG TÔI" />
+          <div className="flex max-w-4xl flex-col justify-center">
+            <TitleNoDash str1={'DỰ ÁN'} str2="CỦA CHÚNG TÔI" />
             <p className="text-3xl font-normal tracking-tight text-gray-900 lg:text-5xl">
               Chúng tôi làm việc với khách hàng để cung cấp các giải pháp sáng
               tạo thúc đẩy tương tác.

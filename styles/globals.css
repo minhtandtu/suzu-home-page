@@ -48,6 +48,27 @@
   .splide__pagination__page.is-active {
     @apply h-2 w-11 rounded bg-red-700;
   }
+  .btn-gray {
+    @apply inline-flex cursor-pointer rounded-lg border border-gray-300 bg-white text-sm text-gray-700 md:text-base;
+  }
+  .btn-gray p {
+    @apply flex px-8 py-2;
+  }
+  .btn-red {
+    @apply inline-flex cursor-pointer rounded-lg bg-red-500 text-sm font-medium text-white md:text-base;
+  }
+  .btn-red p {
+    @apply flex px-4 py-2;
+  }
+  .imgteam {
+    @apply object-cover p-2;
+  }
+  .ptick {
+    @apply flex text-sm font-semibold text-gray-700 md:text-lg;
+  }
+  .circletick {
+    @apply mr-2 aspect-square rounded-full bg-red-100 p-2;
+  }
   .text-fill {
     -webkit-text-fill-color: #e0e0e0;
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 const logo = [
   {name: 'metup', imgUrl: '/Logo/logoMeHup.png', id: 1},
   {name: 'Yeah1', imgUrl: '/Logo/logoYeah1.png', id: 2},
@@ -30,14 +31,13 @@ const ContactUsNow = () => {
                     Hãy cho chúng tôi biết về dự án của bạn nhé.
                   </p>
                 </div>
-                {/* Button LIÊN HỆ NGAY --> */}
-                <div className="mt-8 flex  w-full  px-4 ">
-                  <button
-                    className=" w-full rounded-md border border-red-500 bg-red-500 py-2 px-4 font-bold text-white duration-500
-             hover:bg-red-700 md:w-auto "
-                  >
-                    LIÊN HỆ NGAY &rarr;
-                  </button>
+                {/* Ứng tuyển ngay --> */}
+                <div className="w-full pt-4">
+                  <Link href="/">
+                    <div className="btn-red">
+                      <p>LIÊN HỆ NGAY </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
 
