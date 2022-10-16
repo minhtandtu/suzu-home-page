@@ -63,7 +63,7 @@
   .imgteam {
     @apply object-cover p-2;
   }
-  .ptick {
+  .tick {
     @apply flex text-sm font-semibold text-gray-700 md:text-lg;
   }
   .circletick {

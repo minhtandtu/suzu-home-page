@@ -8,9 +8,9 @@ const navigation = [
   {name: 'Dự án', href: '/portfolio', id: '01'},
   {name: 'Dịch vụ', href: '/service', id: '02'},
   {name: 'Đội ngũ', href: '/ourteam', id: '03'},
-  {name: 'Khách hàng', href: '/ourcustomer', id: '04'},
+  {name: 'Khách hàng', href: '/client', id: '04'},
   {name: 'Blogs', href: '/blog', id: '05'},
-  {name: 'Tuyển dụng', href: '/tuyendung', id: '06'},
+  {name: 'Tuyển dụng', href: '/recruitment', id: '06'},
   {name: 'Về chúng tôi', href: '/aboutus', id: '07'},
   {name: 'Liên hệ', href: '/contact', id: '08'},
 ];
@@ -95,13 +95,13 @@ const Header = () => {
       <Popover as="header" className=" sticky top-0  z-50 ">
         <div className="font-inter mx-auto box-border bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
           <nav
-            className="container relative mx-auto flex items-center justify-between px-4 lg:px-8"
+            className="container relative mx-auto flex items-center justify-between px-4"
             aria-label="Global"
           >
             <div className=" flex items-center">
               <Link href="/">
                 <a>
-                  <span className="sr-only">Your Company Logo</span>
+                  {/*Your Company Logo */}
                   <img className="h-8 w-auto sm:h-10" src="/logo.png" alt="" />
                 </a>
               </Link>

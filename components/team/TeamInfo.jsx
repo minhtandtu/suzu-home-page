@@ -89,7 +89,7 @@ const TeamInfo = () => {
               </li>
               {pages.map((page) => (
                 <li key={page.name}>
-                  <div className="flex items-center">
+                  <div className="flex items-end">
                     <ChevronRightIcon
                       className="h-7 w-7 flex-shrink-0 text-gray-400"
                       aria-hidden="true"

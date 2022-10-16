@@ -2,12 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 const ServiceInfo = () => {
   return (
-    <div className="space-y-4 bg-gray-50 px-4 py-16 md:space-y-8 md:py-24 lg:py-32">
-      <img
-        src="/Service/fullwidthimage.png"
-        className=" relative mx-auto  object-cover"
-      ></img>
-      <div className="container mx-auto max-w-7xl text-left">
+    <div className="space-y-4 bg-gray-50 py-16 md:space-y-8 md:py-24 lg:py-32">
+      <div className="mx-auto w-full 2xl:container">
+        <img
+          src="/Service/fullwidthimage.png"
+          className=" relative mx-auto  object-cover"
+        ></img>
+      </div>
+      <div className="container mx-auto max-w-7xl px-4 text-left">
         <p className="mb-4 text-xl font-semibold text-gray-700 md:mb-6 md:text-3xl">
           Dịch vụ
         </p>

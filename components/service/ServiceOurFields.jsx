@@ -66,7 +66,7 @@ const ServiceOurFields = () => {
       <div className="container mx-auto mb-10 max-w-7xl">
         <div className=" mb-4 md:mb-8">
           <nav className="mb-4 flex" aria-label="Breadcrumb">
-            <ol role="list" className="flex items-center space-x-2">
+            <ol role="list" className="flex items-end space-x-2">
               <li>
                 <Link href="/">
                   <a className="text-sm font-medium text-gray-500 hover:text-gray-500">

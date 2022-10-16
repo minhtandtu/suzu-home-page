@@ -149,7 +149,7 @@ const PortProject = () => {
         <div className="">
           <div className="">
             <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
+              <ol role="list" className="flex items-end space-x-2">
                 <li>
                   <div>
                     <a
