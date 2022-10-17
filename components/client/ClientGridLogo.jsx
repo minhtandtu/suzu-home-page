@@ -52,9 +52,9 @@ const ClientLogo = [
 ];
 const ClientGridLogo = () => {
   return (
-    <div className="bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
+    <div className="bg-gray-50 py-8 md:py-16 lg:py-24">
       <div className="container mx-auto mb-10 max-w-7xl">
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="container mx-auto grid grid-cols-2 px-4 md:grid-cols-4">
           {ClientLogo.map((item, index) => (
             <div
               key={index}

@@ -60,66 +60,58 @@ const projects = [
 ];
 const OurProject = () => {
   return (
-    <>
-      <div className=" mx-auto bg-gray-50  py-8 sm:py-16 md:py-24">
-        <div className=" container mx-auto px-4 md:px-1">
-          {/* Dự án của chúng tôi  */}
-          <div className="mx-auto flex justify-between ">
-            <div className="">
-              <Title str1="DỰ ÁN" str2="CỦA CHÚNG TÔI" />
-              {/* DASH ---------- */}
-            </div>
-            {/* Nut button */}
-            <span className="isolate my-10 hidden md:inline-flex">
-              <button
-                type="button"
-                className=" relative mr-4 flex h-16 w-16 items-center justify-center rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 shadow
+    <div className="bg-gray-50 py-16 md:py-24">
+      {/* Dự án của chúng tôi  */}
+      <div className="container mx-auto max-w-7xl ">
+        <div className="container mx-auto flex justify-between px-4">
+          <div className="justify-center">
+            <Title str1="DỰ ÁN" str2="CỦA CHÚNG TÔI" />
+            {/* DASH ---------- */}
+          </div>
+          {/* Nut button */}
+          <div className="isolate my-10 hidden justify-end md:inline-flex">
+            <button
+              type="button"
+              className=" relative mr-4 flex h-16 w-16 items-center justify-center rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 shadow
                    hover:bg-gray-50 focus:z-10 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
-              >
-                <span className="sr-only">Previous</span>
-                <ChevronLeftIcon className="h-10 w-10" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                className="relative -ml-px inline-flex h-16 w-16  items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-gray-500 shadow hover:bg-gray-50 focus:z-10 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
-              >
-                <span className="sr-only">Next</span>
-                <ChevronRightIcon className="h-10 w-10" aria-hidden="true" />
-              </button>
-            </span>
+            >
+              <ChevronLeftIcon className="h-10 w-10" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="relative -ml-px inline-flex h-16 w-16  items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-3 text-sm font-medium text-gray-500 shadow hover:bg-gray-50 focus:z-10 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
+            >
+              <ChevronRightIcon className="h-10 w-10" aria-hidden="true" />
+            </button>
           </div>
-          {/* Ảnh */}
-          <div className="mx-auto grid w-full gap-1 sm:grid-cols-2 md:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectItem
-                key={project}
-                project={project}
-                aspect={'aspect-4/3'}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Tim hieu them */}
-        <div className=" m-4 h-[122px] rounded border-[5px] border-gray-700 p-4 md:hidden">
-          <Link href="/">
-            <a className="cursor-pointer">
-              <div className="text-left text-2xl font-bold text-gray-700">
-                XEM THÊM DỰ ÁN
-              </div>
-              <div className="flex justify-end py-4">
-                <div className=" ">
-                  <img
-                    src="/Icon/triangle.svg"
-                    alt="triangle"
-                    className="h-10 w-10"
-                  />
-                </div>
-              </div>
-            </a>
-          </Link>
         </div>
       </div>
-    </>
+      {/* Ảnh */}
+      <div className="mx-auto grid w-full gap-1 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-1 2xl:container">
+        {projects.map((project) => (
+          <ProjectItem key={project} project={project} aspect={'aspect-4/3'} />
+        ))}
+      </div>
+      {/* Tim hieu them */}
+      <div className="m-4 h-[122px] rounded border-[5px] border-gray-700 p-4 md:hidden">
+        <Link href="/">
+          <a className="cursor-pointer">
+            <div className="text-left text-2xl font-bold text-gray-700">
+              XEM THÊM DỰ ÁN
+            </div>
+            <div className="flex justify-end py-4">
+              <div className=" ">
+                <img
+                  src="/Icon/triangle.svg"
+                  alt="triangle"
+                  className="h-10 w-10"
+                />
+              </div>
+            </div>
+          </a>
+        </Link>
+      </div>
+    </div>
   );
 };
 

@@ -31,71 +31,67 @@ const workSlides = [
 
 const Works = () => {
   return (
-    <>
-      <div className="mx-auto py-8 px-4 md:py-16 lg:py-24">
-        <div className="container mx-auto w-full max-w-7xl">
-          {/* Big title */}
-          <div className="mx-auto flex flex-col items-center justify-center">
-            <Title str1={'CHÚNG TÔI'} str2={'LÀM GÌ'} />
-          </div>
-          {/* Content */}
-          <div className="flex  flex-wrap items-center justify-center space-x-8 md:flex-nowrap">
-            {works.map((item) => (
-              <div
-                key={item.name}
-                className="flex max-w-md flex-col items-center justify-center"
-              >
-                <Image
-                  src={item.img}
-                  height="402px"
-                  width="268px"
-                  className="object-cover"
-                />
-                <p className=" text-xl font-semibold text-gray-900 md:text-3xl">
-                  {item.name}
-                </p>
-                <p className=" text-sm font-normal text-gray-700 md:text-base">
-                  {item.des}
-                </p>
-              </div>
-            ))}
-          </div>
-          {/* Slider */}
-          <div className="mt-9 flex items-center justify-center md:px-20">
-            <Splide
-              options={{
-                type: 'loop',
-                gap: '1rem',
-                perPage: 4,
-                breakpoints: {
-                  1024: {perPage: 3, gap: '1rem'},
-                  768: {perPage: 2, gap: '1rem'},
-                  640: {perPage: 1, gap: 0},
-                  380: {perPage: 1, gap: 0},
-                },
-                classes: {
-                  prev: 'splide__arrow--prev work-prev',
-                  next: 'splide__arrow--next work-next',
-                },
-              }}
-              aria-label="My Favorite Images2"
-            >
-              {workSlides.map((item) => (
-                <SplideSlide key={item.name}>
-                  <img
-                    src={item.img}
-                    width="233px"
-                    height="244px"
-                    alt="Imageslide"
-                    className="mx-auto object-cover "
-                  />
-                </SplideSlide>
-              ))}
-            </Splide>
-          </div>
-        </div>
+    <div className="container mx-auto w-full max-w-7xl px-4 py-16 md:py-24">
+      {/* Big title */}
+      <div className="mx-auto flex flex-col items-center justify-center">
+        <Title str1={'CHÚNG TÔI'} str2={'LÀM GÌ'} />
       </div>
-    </>
+      {/* Content */}
+      <div className="container mx-auto flex flex-wrap items-center justify-center space-x-8 md:flex-nowrap">
+        {works.map((item) => (
+          <div
+            key={item.name}
+            className="flex max-w-md flex-col items-center justify-center"
+          >
+            <Image
+              src={item.img}
+              height="402px"
+              width="268px"
+              className="object-cover"
+            />
+            <p className=" text-xl font-semibold text-gray-900 md:text-3xl">
+              {item.name}
+            </p>
+            <p className=" text-sm font-normal text-gray-700 md:text-base">
+              {item.des}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* Slider */}
+      <div className="container mx-auto mt-9 flex items-center justify-center md:px-20">
+        <Splide
+          options={{
+            type: 'loop',
+            gap: '1rem',
+            perPage: 4,
+            breakpoints: {
+              1024: {perPage: 3, gap: '1rem'},
+              768: {perPage: 2, gap: '1rem'},
+              640: {perPage: 1, gap: 0},
+              380: {perPage: 1, gap: 0},
+            },
+            classes: {
+              prev: 'splide__arrow--prev work-prev',
+              next: 'splide__arrow--next work-next',
+            },
+          }}
+          aria-label="My Favorite Images2"
+        >
+          {workSlides.map((item) => (
+            <SplideSlide key={item.name}>
+              <img
+                src={item.img}
+                width="233px"
+                height="244px"
+                alt="Imageslide"
+                className="mx-auto object-cover "
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+    </div>
   );
 };
 

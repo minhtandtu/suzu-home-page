@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const TeamRecruitment = () => {
   return (
-    <div className="bg-white px-4 py-8 md:py-16 lg:py-24">
+    <div className="bg-white py-8 md:py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl">
-        <div className="md:flex md:space-x-8">
+        <div className="container mx-auto px-4 md:flex md:space-x-8">
           {/* BoxText */}
           <div className="md:w-1/2">
             <div className="flex h-full flex-col items-center justify-center">

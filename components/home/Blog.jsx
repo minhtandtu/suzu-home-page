@@ -87,34 +87,26 @@ const posts = [
 ];
 const Blog = () => {
   return (
-    <>
-      {/* Blog section */}
-      <div className="mx-auto  py-8 px-4 sm:py-16 lg:py-24">
-        <div className="container mx-auto">
-          <div className="flex flex-col items-center justify-center">
-            <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
-          </div>
-          <div className="mx-auto grid gap-4 lg:grid-cols-3">
-            {posts.map(
-              (item) => (
-                <BlogPost key={item.name} post={item} />
-              ),
-              //  blogpost(item)
-            )}
-          </div>
-          {/* Button */}
-          <div className="md:flex md:justify-center">
-            <Link href={'/'}>
-              <div className="group mt-7 cursor-pointer rounded-lg border border-red-500 bg-white px-4 py-2 text-center text-red-500 transition duration-500 hover:bg-red-200 md:mt-10">
-                <p className="text-base font-medium group-hover:text-red-900">
-                  XEM THÊM BÀI VIẾT &rarr;
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
+    <div className="container mx-auto max-w-7xl py-16 px-4 md:py-24">
+      <div className="flex flex-col items-center justify-center">
+        <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
       </div>
-    </>
+      <div className="container mx-auto grid gap-4 lg:grid-cols-3">
+        {posts.map((item) => (
+          <BlogPost key={item.name} post={item} />
+        ))}
+      </div>
+      {/* Button */}
+      <div className="md:flex md:justify-center">
+        <Link href={'/'}>
+          <div className="group mt-7 cursor-pointer rounded-lg border border-red-500 bg-white px-4 py-2 text-center text-red-500 transition duration-500 hover:bg-red-200 md:mt-10">
+            <p className="text-base font-medium group-hover:text-red-900">
+              XEM THÊM BÀI VIẾT &rarr;
+            </p>
+          </div>
+        </Link>
+      </div>
+    </div>
   );
 };
 

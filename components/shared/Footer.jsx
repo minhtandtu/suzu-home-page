@@ -98,93 +98,98 @@ const Contact = [
 const Footer = () => {
   return (
     <>
-      <footer className=" bg-white" aria-labelledby="footer-heading">
-        <div className="container mx-auto px-4 py-12 lg:py-16 ">
-          <div className="mx-auto grid max-w-7xl gap-y-8 gap-x-8 sm:grid-cols-4">
-            {/* Contact information */}
-            <div className=" ">
-              <img className="h-12" src="/logo.png" alt="Company name" />
-              <div className="mt-auto  ">
-                {Contact.map((contact, index) => (
-                  <p
-                    key={index}
-                    className="mt-4 text-base font-normal text-gray-500"
-                  >
-                    {contact.property} : {contact.content}
-                  </p>
-                ))}
+      <footer className="" aria-labelledby="footer-heading">
+        <div className="container mx-auto max-w-7xl py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto grid gap-y-8 gap-x-8 sm:grid-cols-4">
+              {/* Contact information */}
+              <div className=" ">
+                <img className="h-12" src="/logo.png" alt="Company name" />
+                <div className="mt-auto  ">
+                  {Contact.map((contact, index) => (
+                    <p
+                      key={index}
+                      className="mt-4 text-base font-normal text-gray-500"
+                    >
+                      {contact.property} : {contact.content}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400">
-                SuZu Group
-              </h3>
-              <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.suzugroup.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className="text-base text-gray-500 hover:text-gray-900"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className=" ">
-              <h3 className="text-sm font-semibold text-gray-400">
-                Liên kết nhanh
-              </h3>
-              <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.lienketnhanh.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className="text-base text-gray-500 hover:text-gray-900"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400">
-                Đội ngũ của chúng tôi
-              </h3>
-              <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.doingucuachungtoi.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className="text-base text-gray-500 hover:text-gray-900"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              {/* LINK */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400">
+                  SuZu Group
+                </h3>
+                <ul role="list" className="mt-4 space-y-4">
+                  {footerNavigation.suzugroup.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-500 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className=" ">
+                <h3 className="text-sm font-semibold text-gray-400">
+                  Liên kết nhanh
+                </h3>
+                <ul role="list" className="mt-4 space-y-4">
+                  {footerNavigation.lienketnhanh.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-500 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400">
+                  Đội ngũ của chúng tôi
+                </h3>
+                <ul role="list" className="mt-4 space-y-4">
+                  {footerNavigation.doingucuachungtoi.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-500 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                {/* LINK */}
+              </div>
             </div>
           </div>
         </div>
+        {/*  */}
         <div className="border-t border-gray-200 bg-gray-50">
-          <div className="container mx-auto flex max-w-7xl flex-col-reverse justify-between px-4 py-2 md:flex-row md:py-6">
-            <p className="text-base leading-10 text-gray-400 xl:text-center">
-              &copy; 2022 SuZu Group. All rights reserved.
-            </p>
-            <div className=" flex space-x-6   ">
-              {footerNavigation.social.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-7 w-7" aria-hidden="true" />
-                </a>
-              ))}
+          <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto flex flex-col-reverse justify-between px-4 py-2 md:flex-row md:py-6">
+              <p className="text-base leading-10 text-gray-400 xl:text-center">
+                &copy; 2022 SuZu Group. All rights reserved.
+              </p>
+              <div className=" flex space-x-6   ">
+                {footerNavigation.social.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    className="text-gray-400 hover:text-gray-500"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-7 w-7" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

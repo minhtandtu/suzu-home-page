@@ -55,8 +55,8 @@ const logo = [
 ];
 export const PortHero = () => {
   return (
-    <div className=" mx-auto px-4 py-4">
-      <div className="container mx-auto grid max-w-7xl md:grid-cols-12 md:gap-4">
+    <div className="container mx-auto max-w-7xl py-4">
+      <div className="container mx-auto grid px-4 md:grid-cols-12 md:gap-4">
         {/* Text Section */}
         <div className="py-8 md:col-span-7 md:py-16 lg:py-24 ">
           <div className="flex max-w-4xl flex-col justify-center">

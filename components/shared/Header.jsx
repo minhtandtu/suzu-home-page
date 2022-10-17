@@ -92,29 +92,35 @@ const Header = () => {
   return (
     <>
       {/* Navigation Top Menu ----------------> */}
-      <Popover as="header" className=" sticky top-0  z-50 ">
+      <Popover as="header" className="sticky top-0  z-50 ">
         <div className="font-inter mx-auto box-border bg-white/60 py-2 shadow-md backdrop-blur-lg md:py-4 ">
           <nav
-            className="container relative mx-auto flex items-center justify-between px-4"
+            className="container relative mx-auto max-w-7xl"
             aria-label="Global"
           >
-            <div className=" flex items-center">
-              <Link href="/">
-                <a>
-                  {/*Your Company Logo */}
-                  <img className="h-8 w-auto sm:h-10" src="/logo.png" alt="" />
-                </a>
-              </Link>
-            </div>
+            <div className="container mx-auto flex items-center justify-between px-4">
+              <div className="flex items-center">
+                <Link href="/">
+                  <a>
+                    {/*Your Company Logo */}
+                    <img
+                      className="h-8 w-auto sm:h-10"
+                      src="/logo.png"
+                      alt=""
+                    />
+                  </a>
+                </Link>
+              </div>
 
-            <div className="-mr-2 flex items-center  ">
-              <Popover.Button
-                className="focus-ring-inset inline-flex items-center justify-center gap-2  
+              <div className="-mr-2 flex items-center  ">
+                <Popover.Button
+                  className="focus-ring-inset inline-flex items-center justify-center gap-2  
                    rounded-md  p-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-200"
-              >
-                <p className=" text-sm font-medium sm:text-base">Menu</p>
-                <MenuIcon className="h-6 w-6  " aria-hidden="true" />
-              </Popover.Button>
+                >
+                  <p className=" text-sm font-medium sm:text-base">Menu</p>
+                  <MenuIcon className="h-6 w-6  " aria-hidden="true" />
+                </Popover.Button>
+              </div>
             </div>
           </nav>
         </div>

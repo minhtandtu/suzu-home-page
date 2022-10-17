@@ -31,45 +31,38 @@ const testimonial = [
 ];
 const Testimonial = () => {
   return (
-    <>
-      {/* Testimonial section */}
-      <div className="bg-gray-50">
-        <div className=" mx-auto  py-8 sm:py-16 md:py-24">
-          <div className="mx-auto px-4 md:px-0">
-            {/* Đánh Giá Từ Khách Hàng */}
-            <div className="flex flex-col items-center justify-center">
-              <Title str1={'ĐÁNH GIÁ TỪ'} str2={'KHÁCH HÀNG'} />
-            </div>
-            {/* SLIDE */}
-            <div className="container relative mx-auto flex w-full justify-between px-8 md:px-0">
-              <div className="hidden h-96 rounded-lg py-8 pr-12 md:block"></div>
-              <div className="page w-full md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
-                <Splide
-                  options={{
-                    type: 'loop',
-                    // padding: '15rem',
-
-                    classes: {
-                      pagination: 'splide__pagination pagin',
-                      page: 'splide__pagination__page page',
-                    },
-                  }}
-                  aria-label="My Favorite Images"
-                >
-                  {testimonial.map((item, index) => (
-                    <SplideSlide key={index}>
-                      <TestimonialItem item={item} />
-                    </SplideSlide>
-                  ))}
-                  {/* <ul className="splide__pagination relative z-50 h-96 w-96 bg-red-300"></ul> */}
-                </Splide>
-              </div>
-              <div className="hidden h-96 rounded-lg py-8 pl-12 md:block "></div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-gray-50 py-16 md:py-24">
+      {/* Đánh Giá Từ Khách Hàng */}
+      <div className="flex flex-col items-center justify-center">
+        <Title str1={'ĐÁNH GIÁ TỪ'} str2={'KHÁCH HÀNG'} />
       </div>
-    </>
+      {/* SLIDE */}
+      <div className="container relative mx-auto flex w-full justify-between px-4 md:px-1">
+        <div className="hidden h-96 rounded-lg py-8 pr-12 md:block"></div>
+        <div className="page w-full md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+          <Splide
+            options={{
+              type: 'loop',
+              // padding: '15rem',
+
+              classes: {
+                pagination: 'splide__pagination pagin',
+                page: 'splide__pagination__page page',
+              },
+            }}
+            aria-label="My Favorite Images"
+          >
+            {testimonial.map((item, index) => (
+              <SplideSlide key={index}>
+                <TestimonialItem item={item} />
+              </SplideSlide>
+            ))}
+            {/* <ul className="splide__pagination relative z-50 h-96 w-96 bg-red-300"></ul> */}
+          </Splide>
+        </div>
+        <div className="hidden h-96 rounded-lg py-8 pl-12 md:block "></div>
+      </div>
+    </div>
   );
 };
 

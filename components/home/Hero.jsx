@@ -4,13 +4,13 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section*/}
-      <div className="bg-net mx-auto">
-        <div className="container mx-auto ">
-          {/*spaceholder for top menu */}
-          {/* Không xóa thẻ div bên dưới */}
-          <div className="h-8 sm:py-16  md:h-20 md:py-24 lg:py-32"></div>
-          <div className="mx-auto flex items-center ">
-            <div className="flex w-full flex-col-reverse  md:-mt-24 md:mb-6 md:grid md:grid-cols-2 md:gap-x-4">
+      <div className="bg-net">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mx-auto flex items-center py-8 md:py-12 lg:py-16 2xl:py-24">
+            <div
+              className="container mx-auto flex
+            flex-col-reverse md:mb-6 md:grid md:grid-cols-2 md:gap-x-4"
+            >
               {/* Left Box */}
               <div className="max-w-md sm:max-w-2xl lg:flex lg:items-center lg:text-left ">
                 <div className="px-4 pb-4">

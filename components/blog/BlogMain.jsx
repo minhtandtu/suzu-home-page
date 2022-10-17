@@ -235,44 +235,42 @@ function blogpost(post) {
 
 const BlogMain = () => {
   return (
-    <div className="mx-auto bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
+    <div className="bg-gray-50 py-8 md:py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl ">
         {/* breadscrums + Tag + Combobox */}
-        <div className="">
-          <div className="">
-            <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-end space-x-2">
-                <li>
-                  <div>
+        <div className="container mx-auto px-4">
+          <nav className="mb-4 flex" aria-label="Breadcrumb">
+            <ol role="list" className="flex items-end space-x-2">
+              <li>
+                <div>
+                  <a
+                    href="#"
+                    className="text-sm font-medium text-gray-500 hover:text-gray-500"
+                  >
+                    Trang chủ
+                    <span className="sr-only">Home</span>
+                  </a>
+                </div>
+              </li>
+              {pages.map((page) => (
+                <li key={page.name}>
+                  <div className="flex items-center">
+                    <ChevronRightIcon
+                      className="h-7 w-7 flex-shrink-0 text-gray-400"
+                      aria-hidden="true"
+                    />
                     <a
-                      href="#"
-                      className="text-sm font-medium text-gray-500 hover:text-gray-500"
+                      href={page.href}
+                      className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
+                      aria-current={page.current ? 'page' : undefined}
                     >
-                      Trang chủ
-                      <span className="sr-only">Home</span>
+                      {page.name}
                     </a>
                   </div>
                 </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-center">
-                      <ChevronRightIcon
-                        className="h-7 w-7 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          </div>
+              ))}
+            </ol>
+          </nav>
           {/*  Tag + Combobox */}
           <div className="flex items-center">
             <div className="mr-4 flex-1">
@@ -334,127 +332,127 @@ const BlogMain = () => {
               </select>
             </div>
           </div>
-        </div>
-        {/* Blog Nổi Bậc + Tất Cả Bài Viết*/}
-        <div className="py-8 md:py-16 ">
-          {/* Nổi Bậc */}
-          <div className="pb-4 md:pb-8">
-            <p className="my-4 text-xl font-semibold text-gray-900 md:my-6 md:text-2xl">
-              Nổi bật
-            </p>
-            <div className="mb-4 md:flex md:space-x-4">
-              {/* Box1 */}
-              <div className="pb-4 md:w-1/2">
-                <BlogPost post={specialpost[0]} />
-              </div>
-              <div className="md:w-1/2">
-                <div className="w-full md:flex md:h-[50%]">
-                  {blogpost(specialpost[0])}
+          {/* Blog Nổi Bậc + Tất Cả Bài Viết*/}
+          <div className="py-8 md:py-16 ">
+            {/* Nổi Bậc */}
+            <div className="pb-4 md:pb-8">
+              <p className="my-4 text-xl font-semibold text-gray-900 md:my-6 md:text-2xl">
+                Nổi bật
+              </p>
+              <div className="mb-4 md:flex md:space-x-4">
+                {/* Box1 */}
+                <div className="pb-4 md:w-1/2">
+                  <BlogPost post={specialpost[0]} />
                 </div>
-                <div className="w-full md:h-[50%]">
-                  {' '}
-                  {blogpost(specialpost[2])}
-                </div>
+                <div className="md:w-1/2">
+                  <div className="w-full md:flex md:h-[50%]">
+                    {blogpost(specialpost[0])}
+                  </div>
+                  <div className="w-full md:h-[50%]">
+                    {' '}
+                    {blogpost(specialpost[2])}
+                  </div>
 
-                <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tất Cả Bài Viết*/}
+            <div>
+              <p className="my-4 text-xl font-semibold text-gray-900 md:my-6 md:text-2xl">
+                Tất cả bài viết
+              </p>
+              <div className="grid gap-4 md:grid-cols-3">
+                {post.map(
+                  (item) => (
+                    <BlogPost key={item.name} post={item} />
+                  ),
+                  //  blogpost(item)
+                )}
               </div>
             </div>
           </div>
 
-          {/* Tất Cả Bài Viết*/}
-          <div>
-            <p className="my-4 text-xl font-semibold text-gray-900 md:my-6 md:text-2xl">
-              Tất cả bài viết
-            </p>
-            <div className="grid gap-4 md:grid-cols-3">
-              {post.map(
-                (item) => (
-                  <BlogPost key={item.name} post={item} />
-                ),
-                //  blogpost(item)
-              )}
+          {/* Pagination */}
+          <nav className="flex items-center justify-between border-t border-gray-200 px-4 py-4 sm:px-0 md:py-8">
+            <div className="-mt-px flex w-0 flex-1 ">
+              <Link href={'/'}>
+                <div className="rounded-lg border border-gray-500 ">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent px-8 py-2 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    <ArrowLeftIcon
+                      className=" mr-1 h-5 w-5 text-gray-400 md:mr-3"
+                      aria-hidden="true"
+                    />
+                    QUAY LẠI
+                  </a>
+                </div>
+              </Link>
             </div>
-          </div>
+            <div className="hidden md:-mt-px md:flex">
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                1
+              </a>
+              {/* Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" */}
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-red-500 px-4 pt-4 text-sm font-medium text-red-600"
+                aria-current="page"
+              >
+                2
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                3
+              </a>
+              <span className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">
+                ...
+              </span>
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                8
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                9
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >
+                10
+              </a>
+            </div>
+            <div className="-mt-px flex w-0 flex-1 justify-end">
+              <Link href={'/'}>
+                <div className=" rounded-lg border border-gray-500 ">
+                  <a
+                    href="#"
+                    className="inline-flex items-center border-t-2 border-transparent px-8 py-2 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    TIẾP THEO
+                    <ArrowRightIcon
+                      className="ml-1 h-5 w-5 text-gray-400 md:ml-3"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </div>
+              </Link>
+            </div>
+          </nav>
         </div>
-
-        {/* Pagination */}
-        <nav className="flex items-center justify-between border-t border-gray-200 px-4 py-4 sm:px-0 md:py-8">
-          <div className="-mt-px flex w-0 flex-1 ">
-            <Link href={'/'}>
-              <div className="rounded-lg border border-gray-500 ">
-                <a
-                  href="#"
-                  className="inline-flex items-center border-t-2 border-transparent px-8 py-2 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
-                >
-                  <ArrowLeftIcon
-                    className=" mr-1 h-5 w-5 text-gray-400 md:mr-3"
-                    aria-hidden="true"
-                  />
-                  QUAY LẠI
-                </a>
-              </div>
-            </Link>
-          </div>
-          <div className="hidden md:-mt-px md:flex">
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >
-              1
-            </a>
-            {/* Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" */}
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-red-500 px-4 pt-4 text-sm font-medium text-red-600"
-              aria-current="page"
-            >
-              2
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >
-              3
-            </a>
-            <span className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">
-              ...
-            </span>
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >
-              8
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >
-              9
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            >
-              10
-            </a>
-          </div>
-          <div className="-mt-px flex w-0 flex-1 justify-end">
-            <Link href={'/'}>
-              <div className=" rounded-lg border border-gray-500 ">
-                <a
-                  href="#"
-                  className="inline-flex items-center border-t-2 border-transparent px-8 py-2 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
-                >
-                  TIẾP THEO
-                  <ArrowRightIcon
-                    className="ml-1 h-5 w-5 text-gray-400 md:ml-3"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div>
-            </Link>
-          </div>
-        </nav>
       </div>
     </div>
   );
