@@ -2,7 +2,7 @@ import React from 'react';
 import TitleNoDash from '../shared/TitleNoDash';
 const AboutUsHero = () => {
   return (
-    <div className="mx-autopy-8 md:py-16 ">
+    <div className="mx-auto py-8 md:py-16 ">
       <div className="container mx-auto max-w-7xl px-4 ">
         {/* Text Section */}
         <div className="py-8  md:py-16 ">

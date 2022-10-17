@@ -61,7 +61,7 @@ export const AboutUsManagers = () => {
         <Title str1={'QUẢN LÍ'} str2="ĐỘI NGŨ" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {managers.map((item, index) => (
-            <div>
+            <div key={index}>
               <img
                 src={item.imageSrc}
                 className="aspect-square rounded-lg  "

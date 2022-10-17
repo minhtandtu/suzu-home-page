@@ -99,7 +99,7 @@ export const AboutUsLeaders = () => {
         <Title str1={'LÃNH ĐẠO'} str2=" CÔNG TY" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {leaders.map((item, index) => (
-            <div>
+            <div key={index}>
               <img
                 src={item.imageSrc}
                 className="aspect-square rounded-lg  "
