@@ -105,7 +105,7 @@ const recruitPost = [
 ];
 export const JobList = () => {
   return (
-    <div className="bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
+    <div className="bg-gray-50 py-16 md:py-24">
       <div className="container mx-auto max-w-7xl ">
         {/* breadscrums + Tag + Combobox */}
         <div className="container mx-auto px-4">

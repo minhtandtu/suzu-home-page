@@ -136,31 +136,36 @@ const Header = () => {
         >
           <Popover.Panel
             focus
-            className="absolute inset-x-0 top-0 z-30 mx-auto  origin-top transform px-2 transition "
+            className="absolute inset-x-0 top-0 z-30 mx-auto origin-top transform px-2 transition "
           >
-            <div className="mx-auto overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5 md:pb-8 lg:pb-16 ">
-              <div className="container mx-auto xl:max-w-5xl 2xl:max-w-7xl">
-                <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 md:border-0 md:px-0">
-                  <Link href="/">
-                    <img
-                      className="h-12 w-auto cursor-pointer"
-                      src="logo.png"
-                      alt=""
-                    />
-                  </Link>
-                  <div className="-mr-2">
-                    <Popover.Button
-                      className="focus-ring-inset inline-flex items-center justify-center gap-2  
+            <div
+              className="mx-auto overflow-hidden rounded-lg bg-white shadow-md ring-1 
+            ring-black ring-opacity-5 md:pb-6 "
+            >
+              <div className="container mx-auto max-w-7xl">
+                <div className="container mx-auto">
+                  <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 md:border-0 md:px-0">
+                    <Link href="/">
+                      <img
+                        className="h-12 w-auto cursor-pointer"
+                        src="logo.png"
+                        alt=""
+                      />
+                    </Link>
+                    <div className="-mr-2">
+                      <Popover.Button
+                        className="focus-ring-inset inline-flex items-center justify-center gap-2  
                    rounded-md  p-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-200"
-                    >
-                      <p className=" text-sm font-medium sm:text-base">Đóng</p>
-                      <XIcon className="h-6 w-6 " aria-hidden="true" />
-                    </Popover.Button>
+                      >
+                        <p className=" text-sm font-medium sm:text-base">
+                          Đóng
+                        </p>
+                        <XIcon className="h-6 w-6 " aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
                   </div>
-                </div>
-                <div className="w-full pt-10 pb-4 md:flex md:justify-between md:pt-0">
-                  <div className="w-full pt-5 pb-6">
-                    <div className="cursor-pointer space-y-1 px-2 md:px-0">
+                  <div className="pt-5 pb-4 md:flex md:justify-between md:pt-0">
+                    <div className="cursor-pointer  px-2 md:px-0">
                       <Link href="/">
                         <p className="inline-flex cursor-pointer border-b-2 border-red-500 px-4 text-4xl font-semibold leading-10 text-red-500 ">
                           Trang chủ
@@ -185,41 +190,41 @@ const Header = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
 
-                  <div className="hidden w-1/4 flex-col justify-between md:flex">
-                    <div></div>
-                    <div>
-                      <div className="">
-                        {contact.map((item) => (
-                          <p
-                            key={item.property}
-                            className="p-3 text-base font-semibold text-gray-500"
-                          >
-                            {item.property} : {item.content}
-                          </p>
-                        ))}
-                      </div>
+                    <div className="hidden w-1/4 flex-col justify-between md:flex">
+                      <div></div>
+                      <div>
+                        <div className="">
+                          {contact.map((item) => (
+                            <p
+                              key={item.property}
+                              className="p-3 text-base font-semibold text-gray-500"
+                            >
+                              {item.property} : {item.content}
+                            </p>
+                          ))}
+                        </div>
 
-                      <div className="flex space-x-6 ">
-                        {socialLogo.social.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="text-gray-400 hover:text-gray-500"
-                          >
-                            <span className="sr-only">{item.name}</span>
-                            <item.icon
-                              className="ml-4 h-7 w-7"
-                              aria-hidden="true"
-                            />
-                          </a>
-                        ))}
+                        <div className="flex space-x-6 ">
+                          {socialLogo.social.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="text-gray-400 hover:text-gray-500"
+                            >
+                              <span className="sr-only">{item.name}</span>
+                              <item.icon
+                                className="ml-4 h-7 w-7"
+                                aria-hidden="true"
+                              />
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="pt-20 md:hidden">
-                    <div className="bottom-0 z-20 mx-auto h-[5px] w-[50%] rounded-[100px] bg-black "></div>
+                    <div className="pt-20 md:hidden">
+                      <div className="bottom-0 z-20 mx-auto h-2 w-[50%] rounded-[100px] bg-black "></div>
+                    </div>
                   </div>
                 </div>
               </div>

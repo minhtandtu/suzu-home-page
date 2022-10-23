@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 export const BlogHero = () => {
   return (
-    <div className="container mx-auto max-w-7xl py-8 md:py-16 lg:py-24 ">
+    <div className="container mx-auto max-w-7xl py-16 pt-20 md:pt-16 md:pb-12  ">
       <div className="container mx-auto px-4 ">
         {/* Text Section */}
         <div className="flex max-w-4xl flex-col justify-center">

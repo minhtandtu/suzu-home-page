@@ -87,11 +87,11 @@ const posts = [
 ];
 const Blog = () => {
   return (
-    <div className="container mx-auto max-w-7xl py-16 px-4 md:py-24">
+    <div className="container mx-auto max-w-7xl py-16 md:py-24">
       <div className="flex flex-col items-center justify-center">
         <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
       </div>
-      <div className="container mx-auto grid gap-4 lg:grid-cols-3">
+      <div className="container mx-auto grid gap-4 px-4 lg:grid-cols-3">
         {posts.map((item) => (
           <BlogPost key={item.name} post={item} />
         ))}

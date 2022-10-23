@@ -199,7 +199,7 @@ function blogpost(post) {
       {/* Content */}
       <img
         src={post.imageSrc}
-        className="h-52 w-full rounded-lg object-cover md:w-[50%] "
+        className="h-56 w-full rounded-lg object-cover md:w-[50%] "
       ></img>
       <div className="flex flex-col justify-between space-y-4 md:ml-4 md:w-[50%] md:space-y-2">
         <div className="flex text-sm font-semibold text-purple-700">
@@ -346,7 +346,7 @@ const BlogMain = () => {
                 </div>
                 <div className="md:w-1/2">
                   <div className="w-full md:flex md:h-[50%]">
-                    {blogpost(specialpost[0])}
+                    {blogpost(specialpost[1])}
                   </div>
                   <div className="w-full md:h-[50%]">
                     {' '}

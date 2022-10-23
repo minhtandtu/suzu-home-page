@@ -56,24 +56,26 @@ function classNames(...classes) {
 
 export const AboutUsManagers = () => {
   return (
-    <div className="mx-auto bg-gray-50 px-4 py-8 md:py-16 lg:py-24">
+    <div className="mx-auto bg-gray-50 py-16 md:py-24">
       <div className="container mx-auto max-w-7xl ">
-        <Title str1={'QUẢN LÍ'} str2="ĐỘI NGŨ" />
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {managers.map((item, index) => (
-            <div key={index}>
-              <img
-                src={item.imageSrc}
-                className="aspect-square rounded-lg  "
-              ></img>
-              <p className="pl-4 text-lg font-medium text-gray-900 md:text-2xl">
-                {item.name}
-              </p>
-              <p className="pl-4 text-base font-normal text-red-500 md:text-lg">
-                {item.role}
-              </p>
-            </div>
-          ))}
+        <div className="container mx-auto px-4 ">
+          <Title str1={'QUẢN LÍ'} str2="ĐỘI NGŨ" />
+          <div className="grid grid-cols-2 gap-4 pt-4 md:grid-cols-4 md:pt-0">
+            {managers.map((item, index) => (
+              <div key={index}>
+                <img
+                  src={item.imageSrc}
+                  className="aspect-square rounded-lg  "
+                ></img>
+                <p className="pl-4 text-lg font-medium text-gray-900 md:text-2xl">
+                  {item.name}
+                </p>
+                <p className="pl-4 text-base font-normal text-red-500 md:text-lg">
+                  {item.role}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

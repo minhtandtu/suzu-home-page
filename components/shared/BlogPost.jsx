@@ -6,13 +6,13 @@ function classNames(...classes) {
 }
 const BlogPost = ({post, position}) => {
   return (
-    <div className="space-y-2 md:space-y-4">
+    <div className="space-y-8 pb-4 md:pb-8">
       {/* Content */}
       <img
         src={post.imageSrc}
         className="h-56 w-full rounded-lg object-cover"
       ></img>
-      <div className="md:space-y-4">
+      <div className="space-y-4">
         <div className="flex text-sm font-semibold text-purple-700">
           <p>{post.author}</p> <p> &nbsp;&bull;&nbsp; </p> <p>{post.date}</p>
         </div>

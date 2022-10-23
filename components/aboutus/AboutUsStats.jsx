@@ -4,10 +4,10 @@ import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
 
 export const AboutUsStats = () => {
   return (
-    <div className="px-4 py-8 md:py-16 lg:py-24">
-      <div className="container mx-auto">
-        <div className=" flex flex-col items-center justify-center">
-          <Title str1={'PHÁT TRIỂN'} str2="CÙNG DOANH NGHIỆP" />
+    <div className="container mx-auto max-w-7xl py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-start pb-4 md:items-center md:justify-center">
+          <Title str1={'PHÁT TRIỂN CÙNG'} str2="DOANH NGHIỆP" />
         </div>
         <div className="flex flex-wrap justify-center space-y-4 md:flex-nowrap md:space-x-4 md:space-y-0">
           <div className="w-full space-y-5 rounded-lg border border-gray-200 bg-gray-50 p-5 text-center md:p-10">

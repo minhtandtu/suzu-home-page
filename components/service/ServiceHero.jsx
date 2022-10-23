@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const ServiceHero = ({item}) => {
   return (
-    <div className="container mx-auto max-w-7xl py-8 md:py-16 lg:py-24">
+    <div className="container mx-auto max-w-7xl py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="flex max-w-4xl flex-col justify-center">
           <TitleNoDash str1={item.name1} str2={item.name2} />

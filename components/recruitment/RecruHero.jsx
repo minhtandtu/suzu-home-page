@@ -4,16 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 const RecruHero = () => {
   return (
-    <div className="py-8 md:py-16 lg:py-24">
+    <div className="">
       <div className="container mx-auto max-w-7xl">
         <div className="container mx-auto px-4 ">
           {/* Text Section */}
-          <div className="py-8  md:py-16 lg:py-24 ">
+          <div className="pt-20 pb-16">
             <div className="flex max-w-4xl flex-col justify-center">
               <TitleNoDash str1={'TUYỂN DỤNG'} str2="SUZU GROUP" />
-              <p className="text-3xl font-normal tracking-tight text-gray-900 lg:text-5xl">
+              <p className="text-3xl font-normal tracking-tighter text-gray-900 lg:text-5xl">
                 Chào mừng bạn đến trang tuyển dụng của{' '}
-                <span className="text-red-500">SuZu Group . </span> Chúng tôi
+                <span className="text-red-500">SuZu Group. </span> Chúng tôi
                 luôn tìm kiếm tài năng và quan điểm mới.
               </p>
               <div className="mt-8 flex md:mt-16 md:hidden">
@@ -44,7 +44,7 @@ const RecruHero = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto py-8 md:py-16 lg:py-24 2xl:container">
+      <div className="mx-auto 2xl:container">
         <img
           src="/Recruitment/image.png"
           className="object-cover"

@@ -55,11 +55,11 @@ const logo = [
 ];
 export const PortHero = () => {
   return (
-    <div className="container mx-auto max-w-7xl py-4">
+    <div className="container mx-auto max-w-7xl">
       <div className="container mx-auto grid px-4 md:grid-cols-12 md:gap-4">
         {/* Text Section */}
-        <div className="py-8 md:col-span-7 md:py-16 lg:py-24 ">
-          <div className="flex max-w-4xl flex-col justify-center">
+        <div className="flex pt-16 pb-0 md:col-span-7 md:items-center md:py-0">
+          <div className="flex flex-col justify-center">
             <TitleNoDash str1={'DỰ ÁN'} str2="CỦA CHÚNG TÔI" />
             <p className="text-3xl font-normal tracking-tight text-gray-900 lg:text-5xl">
               Chúng tôi làm việc với khách hàng để cung cấp các giải pháp sáng
