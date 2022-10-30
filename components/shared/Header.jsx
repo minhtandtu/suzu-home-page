@@ -11,7 +11,7 @@ const navigation = [
   {name: 'Khách hàng', href: '/client', id: '04'},
   {name: 'Blogs', href: '/blog', id: '05'},
   {name: 'Tuyển dụng', href: '/recruitment', id: '06'},
-  {name: 'Về chúng tôi', href: '/aboutus', id: '07'},
+  {name: 'Về chúng tôi', href: '/about-us', id: '07'},
   {name: 'Liên hệ', href: '/contact', id: '08'},
 ];
 const socialLogo = {

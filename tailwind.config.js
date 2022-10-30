@@ -32,9 +32,15 @@ module.exports = {
           '50%': {'margin-top': '20px', opacity: '1'},
           '100%': {'margin-top': '40px', opacity: '0'},
         },
+        slideHorizontal: {
+          '0%': {'margin-left': '0px', opacity: '0'},
+          '50%': {'margin-left': '192px', opacity: '1'},
+          '100%': {'margin-left': '384px', opacity: '0'},
+        },
       },
       animation: {
         slideDown: 'slideDown 3s ease-in-out infinite',
+        slideHorizontal: 'slideHorizontal 3s ease-in-out 3s infinite',
       },
       fontFamily: {
         anton: ['Anton', ...defaultTheme.fontFamily.sans],

@@ -8,6 +8,14 @@
   }
 }
 @layer components {
+  .limitline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
   .bd {
     @apply border border-gray-600;
   }

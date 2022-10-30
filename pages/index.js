@@ -35,7 +35,7 @@ export default function Home() {
           {/* BLOG - TIN TỨC */}
           <Blog />
           {/*LIÊN HỆ NGAY + LOGO*/}
-          <ContactUsNow />
+          {/* <ContactUsNow /> */}
         </main>
         <Footer />
       </div>

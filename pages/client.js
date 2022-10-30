@@ -22,7 +22,7 @@ export default function client() {
           <ClientInfo />
           <ClientGridLogo />
           <ClientQA />
-          <ContactUsNow />
+          {/* <ContactUsNow /> */}
         </main>
         <Footer />
       </div>

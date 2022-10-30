@@ -62,9 +62,9 @@ const Hero = () => {
         {/* Truot xuong + bouncing arrow oval box */}
         <div className="relative mx-auto w-full">
           <div className="relative flex h-full w-full flex-col md:justify-start">
-            <img className="z-10 w-full " src="/oval.svg" alt="" />
+            <img className="z-10 mx-auto w-full " src="/eclipse1.png" alt="" />
             <div className="absolute top-8 left-0 z-20 mx-auto flex w-full flex-col md:top-14">
-              <div className="mx-auto ">
+              <div className="mx-auto">
                 <p className="text-xs font-normal text-gray-500">Trượt xuống</p>
               </div>
               <div className="mx-auto">

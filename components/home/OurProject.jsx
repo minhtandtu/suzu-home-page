@@ -93,20 +93,18 @@ const OurProject = () => {
         ))}
       </div>
       {/* Tim hieu them */}
-      <div className="m-4 h-[122px] rounded border-[5px] border-gray-700 p-4 md:hidden">
+      <div className="m-4 h-[122px] rounded border-2 border-gray-700 p-4 md:hidden">
         <Link href="/">
           <a className="cursor-pointer">
             <div className="text-left text-2xl font-bold text-gray-700">
               XEM THÊM DỰ ÁN
             </div>
             <div className="flex justify-end py-4">
-              <div className=" ">
-                <img
-                  src="/Icon/triangle.svg"
-                  alt="triangle"
-                  className="h-10 w-10"
-                />
-              </div>
+              <img
+                src="/Icon/triangle.svg"
+                alt="triangle"
+                className="h-10 w-10"
+              />
             </div>
           </a>
         </Link>

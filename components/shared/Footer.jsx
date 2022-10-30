@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 const footerNavigation = {
   suzugroup: [
     {name: 'Về chúng tôi', href: '#'},
@@ -94,83 +95,146 @@ const Contact = [
       '265/40 Nơ Trang Long, Phường 11, Quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam',
   },
 ];
+const logo = [
+  {name: 'metup', imgUrl: '/Logo/logoMeHup.png', id: 1},
+  {name: 'Yeah1', imgUrl: '/Logo/logoYeah1.png', id: 2},
+  {name: 'LocTroi', imgUrl: '/Logo/logoLocTroi.png', id: 3},
+  {name: 'pp', imgUrl: '/Logo/logoPP.png', id: 4},
+  {name: 'Casting', imgUrl: '/Logo/Castinglogo.png', id: 5},
+  {name: 'BCM', imgUrl: '/Logo/BCMlogo.png', id: 6},
+  {name: 'Icon ', imgUrl: '/Logo/IconMedialogo.png', id: 7},
+  {name: 'Chin', imgUrl: '/Logo/Chinlogo.png', id: 8},
+  {name: 'EON', imgUrl: '/Logo/Eonlogo.png', id: 9},
+];
 
 const Footer = () => {
   return (
     <>
-      <footer className="" aria-labelledby="footer-heading">
-        <div className="container mx-auto max-w-7xl py-16 md:py-24">
+      <footer className="relative bg-gray-50" aria-labelledby="footer-heading">
+        <div className="h-60 md:h-96"></div>
+        <div className="container absolute inset-x-0 top-20 mx-auto max-w-7xl">
           <div className="container mx-auto px-4">
-            <div className="mx-auto grid gap-y-8 gap-x-8 sm:grid-cols-4">
-              {/* Contact information */}
-              <div className=" ">
-                <img className="h-12" src="/logo.png" alt="Company name" />
-                <div className="mt-auto  ">
-                  {Contact.map((contact, index) => (
-                    <p
-                      key={index}
-                      className="mt-4 text-base font-normal text-gray-500"
-                    >
-                      {contact.property} : {contact.content}
+            <div className="md:mt-4 md:rounded-lg md:bg-white md:p-12 md:shadow-xl">
+              <div className="md:grid md:grid-cols-2 md:gap-8 ">
+                {/* Text + Button */}
+                <div className="mb-8 flex h-60 flex-col rounded-lg bg-white p-4 shadow-lg md:col-span-1 md:h-full md:p-0 md:shadow-none">
+                  <div className="flex flex-1 flex-col justify-evenly md:max-w-md">
+                    <p className="text-left text-xl font-semibold tracking-tight text-gray-900  sm:text-3xl md:leading-10">
+                      Tham gia cùng hơn{' '}
+                      <span className="text-red-500"> 20+ </span> công ty khởi
+                      nghiệp đang phát triển với{' '}
+                      <span className="text-red-500">SuZu Group</span>
                     </p>
+                    <p className="mt-3 max-w-3xl text-left  text-base text-gray-500 md:text-xl">
+                      Hãy cho chúng tôi biết về dự án của bạn nhé.
+                    </p>
+                  </div>
+                  {/* Ứng tuyển ngay --> */}
+                  <div className="w-full pt-4">
+                    <Link href="/">
+                      <div className="btn-red">
+                        <p>LIÊN HỆ NGAY </p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* LOGO */}
+                <div className="grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-3">
+                  {logo.map((cai, index) => (
+                    <div
+                      key={index}
+                      className="col-span-1 flex cursor-pointer justify-center py-4 px-4"
+                    >
+                      <img
+                        className="h-8 object-scale-down md:max-h-12"
+                        src={cai.imgUrl}
+                        alt="logo"
+                      />
+                    </div>
                   ))}
                 </div>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400">
-                  SuZu Group
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {footerNavigation.suzugroup.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=" ">
-                <h3 className="text-sm font-semibold text-gray-400">
-                  Liên kết nhanh
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {footerNavigation.lienketnhanh.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400">
-                  Đội ngũ của chúng tôi
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {footerNavigation.doingucuachungtoi.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                {/* LINK */}
               </div>
             </div>
           </div>
         </div>
+        <img src="/bgfooter.png" className="mx-auto w-full object-cover"></img>
+        {/*  */}
+        <div className="bg-white pt-96 md:pt-0">
+          <div className="container mx-auto max-w-7xl py-16 md:py-24 ">
+            <div className="container mx-auto  px-4 ">
+              <div className="mx-auto grid gap-y-8 gap-x-8 sm:grid-cols-4">
+                {/* Contact information */}
+                <div className=" ">
+                  <img className="h-12" src="/logo.png" alt="Company name" />
+                  <div className="mt-auto  ">
+                    {Contact.map((contact, index) => (
+                      <p
+                        key={index}
+                        className="mt-4 text-base font-normal text-gray-500"
+                      >
+                        {contact.property} : {contact.content}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-400">
+                    SuZu Group
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.suzugroup.map((item, index) => (
+                      <li key={index}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=" ">
+                  <h3 className="text-sm font-semibold text-gray-400">
+                    Liên kết nhanh
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.lienketnhanh.map((item, index) => (
+                      <li key={index}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-400">
+                    Đội ngũ của chúng tôi
+                  </h3>
+                  <ul role="list" className="mt-4 space-y-4">
+                    {footerNavigation.doingucuachungtoi.map((item, index) => (
+                      <li key={index}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-500 hover:text-gray-900"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  {/* LINK */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/*  */}
         <div className="border-t border-gray-200 bg-gray-50">
           <div className="container mx-auto max-w-7xl">

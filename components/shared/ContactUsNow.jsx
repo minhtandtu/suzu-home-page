@@ -14,10 +14,10 @@ const logo = [
 const ContactUsNow = () => {
   return (
     <>
-      <div className="mx-auto bg-gray-50 py-16 md:py-24">
+      <div className="mx-auto bg-gray-50 py-16 md:py-24 ">
         <div className="container mx-auto max-w-7xl">
           <div className="container mx-auto px-4">
-            <div className="md:rounded-lg md:bg-white md:p-12 md:shadow-xl ">
+            <div className="md:rounded-lg md:bg-white md:p-12 md:shadow-xl">
               <div className="md:grid md:grid-cols-2 md:gap-8 ">
                 {/* Text + Button */}
                 <div className="mb-8 rounded-lg bg-white p-4 shadow-lg md:col-span-1 md:shadow-none">

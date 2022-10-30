@@ -10,7 +10,7 @@ const teaminfo = [
     major2: 'Hoạt hình',
     major3: 'Video âm nhạc',
     major4: 'Truyện tranh',
-    post_src: '/',
+    post_src: '/studio-home',
     featureImageSrc: '/Team/studio.png',
   },
   {
@@ -186,7 +186,7 @@ const TeamInfo = () => {
                     </div>
 
                     <div className="pb-4">
-                      <Link href="/">
+                      <Link href={item.post_src}>
                         <div className="btn-gray whitespace-nowrap">
                           <p>
                             XEM CHI TIẾT{' '}
