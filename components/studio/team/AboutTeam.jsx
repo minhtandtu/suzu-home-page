@@ -128,13 +128,13 @@ const AboutTeam = () => {
           <p className="text-sm font-normal text-gray-900 md:text-xl">
             Xuất phát điểm với hệ thống page comic cộng đồng đa dạng về đề tài
             và phong cách như:
-            <span className="font-bold"> Điều Nhỏ Xíu Xiu</span> (cổ vũ),{' '}
+            <span className="font-bold">Điều Nhỏ Xíu Xiu</span> (cổ vũ),{' '}
             <span className="font-bold">Chị Chị Em Em</span> (giải trí),{' '}
             <span className="font-bold">Xanh Mượt</span> (tình yêu),{' '}
-            <span className="font-bold"> Về Ăn Cơm</span> (gia đình),{' '}
+            <span className="font-bold">Về Ăn Cơm</span> (gia đình),{' '}
             <span className="font-bold">Biết Gì Hôn</span> (kiến thức),{' '}
             <span className="font-bold">Mượt</span>(LGBT+),
-            <span className="font-bold"> Hai Chiều</span> (xã hội),... <br />
+            <span className="font-bold">Hai Chiều</span> (xã hội),... <br />
             <br /> SuZu Studio ngày càng nỗ lực phát triển những sản phẩm art
             chuyên nghiệp hơn như phim & MV hoạt hình, truyện tranh dài kỳ,...
             hứa hẹn cùng tham gia xây dựng tương lai cho hoạt hình & truyện
@@ -173,6 +173,7 @@ const AboutTeam = () => {
           </div>
         </div>
       </div>
+      {/*  */}
     </div>
   );
 };

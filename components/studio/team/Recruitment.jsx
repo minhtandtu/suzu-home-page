@@ -168,76 +168,84 @@ const job = [
 ];
 export const Recruitment = () => {
   return (
-    <div className="container mx-auto max-w-7xl pt-16 md:pt-24">
-      <div className="container mx-auto px-4">
-        <div className="">
-          {/* BoxText */}
-          <p className="mb-4 text-xl font-semibold text-gray-700 md:text-3xl">
-            Chúng tôi đang tìm kiếm
-          </p>
-          <p className="mb-8 text-2xl font-normal tracking-tight text-gray-900 md:text-4xl">
-            Các vị trí đang tuyển dụng ở
-            <span className="text-red-500"> SuZu Studio</span>
-          </p>
-          {/*  */}
-          {recruitPost.map((item, index) => (
-            <div className="grid md:grid-cols-3" key={index}>
-              <div className="bdd bg-red-300"></div>
-              <div className="bg-white py-4 md:col-span-2">
-                <div className="rounded-lg bg-gray-100 px-4 py-2">
-                  <div className="flex justify-between">
-                    <p className="text-xs font-semibold text-red-700 md:text-sm">
-                      {item.department}
-                    </p>{' '}
-                    <Link href={'/'}>
-                      <a className="hidden text-sm text-red-500 md:inline-flex  ">
-                        ỨNG TUYỂN&nbsp;
-                        <ArrowRightIcon className="h-6 -rotate-45" />{' '}
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="space-4 md:space-y-6">
-                    <p className="text-base font-medium text-gray-900 md:text-lg">
-                      {item.jobTitle}
-                    </p>
-                    <p className="text-sm font-normal text-gray-500 md:text-base">
-                      {item.description}
-                    </p>
-                    <div className="flex space-x-2">
-                      <div className="text-gray-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className="h-5 w-5"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            strokeLinejoin="round"
-                            d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                          <path
-                            stroke-linecap="round"
-                            strokeLinejoin="round"
-                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-sm font-medium text-gray-500 md:text-base">
-                        {item.location}
+    <div className="pt-16 md:pt-24">
+      <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto px-4">
+          <div className="">
+            {/* BoxText */}
+            <p className="mb-4 text-xl font-semibold text-gray-700 md:text-3xl">
+              Chúng tôi đang tìm kiếm
+            </p>
+            <p className="mb-8 text-2xl font-normal tracking-tight text-gray-900 md:text-4xl">
+              Các vị trí đang tuyển dụng ở
+              <span className="text-red-500"> SuZu Studio</span>
+            </p>
+            {/*  */}
+            {recruitPost.map((item, index) => (
+              <div className="grid md:grid-cols-3" key={index}>
+                <div className="bdd bg-red-300"></div>
+                <div className="bg-white py-4 md:col-span-2">
+                  <div className="rounded-lg bg-gray-100 px-4 py-2">
+                    <div className="flex justify-between">
+                      <p className="text-xs font-semibold text-red-700 md:text-sm">
+                        {item.department}
                       </p>{' '}
-                      <ClockIcon className="h-5 text-gray-400" />
-                      <p className="text-sm font-medium text-gray-500 md:text-base">
-                        {item.type}
+                      <Link href={'/'}>
+                        <a className="hidden text-sm text-red-500 md:inline-flex  ">
+                          ỨNG TUYỂN&nbsp;
+                          <ArrowRightIcon className="h-6 -rotate-45" />{' '}
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="space-4 md:space-y-6">
+                      <p className="text-base font-medium text-gray-900 md:text-lg">
+                        {item.jobTitle}
                       </p>
+                      <p className="text-sm font-normal text-gray-500 md:text-base">
+                        {item.description}
+                      </p>
+                      <div className="flex space-x-2">
+                        <div className="text-gray-400">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            className="h-5 w-5"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                            />
+                          </svg>
+                        </div>
+                        <p className="text-sm font-medium text-gray-500 md:text-base">
+                          {item.location}
+                        </p>{' '}
+                        <ClockIcon className="h-5 text-gray-400" />
+                        <p className="text-sm font-medium text-gray-500 md:text-base">
+                          {item.type}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </div>
+      <div className="mx-auto pt-16 md:pt-24 2xl:container">
+        <img
+          src="/Studio/image8.png"
+          className="h-full w-full object-cover"
+        ></img>
       </div>
     </div>
   );
