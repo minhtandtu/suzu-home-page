@@ -242,7 +242,7 @@ const Footer = () => {
               <p className="text-base leading-10 text-gray-400 xl:text-center">
                 &copy; 2022 SuZu Group. All rights reserved.
               </p>
-              <div className=" flex space-x-6   ">
+              <div className="flex space-x-6   ">
                 {footerNavigation.social.map((item, index) => (
                   <a
                     key={index}

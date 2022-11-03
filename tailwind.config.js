@@ -4,8 +4,8 @@ const colors = require('tailwindcss/colors');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,html}',
+    './components/**/*.{js,ts,jsx,tsx,html}',
   ],
   safelist: [
     'splide__arrow--next',
@@ -80,5 +80,6 @@ module.exports = {
     require('tailwindcss-text-fill-stroke'), // no options to configure
     require('@tailwindcss/forms'),
     require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/typography'),
   ],
 };
