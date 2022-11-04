@@ -17,7 +17,6 @@ export default function recruitment() {
         <main>
           <RecruHero />
           <JobList />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>

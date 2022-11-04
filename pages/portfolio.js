@@ -17,7 +17,6 @@ export default function Home() {
         <main>
           <PortHero />
           <PortProject />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>

@@ -321,11 +321,11 @@ export const BlogDetail = () => {
               Bài viết được mọi người cùng quan tâm
             </p>
             <Link2 href="#">
-              <div className="btn-red hidden w-full justify-center md:inline-flex md:w-auto  ">
-                <p className="flex items-center">
+              <div className="btn-red hidden justify-center md:flex">
+                <a className="flex items-center">
                   XEM TOÀN BỘ BÀI VIẾT &nbsp;
                   <ArrowRightIcon className="h-5 w-5 -rotate-45" />
-                </p>
+                </a>
               </div>
             </Link2>
           </div>
@@ -338,11 +338,11 @@ export const BlogDetail = () => {
         </div>
         <div className="px-4">
           <Link2 href="#">
-            <div className="btn-red mt-4 inline-flex w-full justify-center md:hidden ">
-              <p className="flex items-center">
+            <div className="btn-red mt-4 md:hidden ">
+              <a className="flex items-center">
                 XEM TOÀN BỘ BÀI VIẾT &nbsp;
                 <ArrowRightIcon className="h-5 w-5 -rotate-45" />
-              </p>
+              </a>
             </div>
           </Link2>
         </div>

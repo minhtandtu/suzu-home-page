@@ -25,7 +25,6 @@ export default function service() {
           <ServiceHero item={item} />
           <ServiceOurFields />
           <ServiceInfo />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>

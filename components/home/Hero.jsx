@@ -41,13 +41,10 @@ const Hero = () => {
                       tristique ultrices duis laoreet consectetur bibendum et
                       pulvinar integer tristique massa,
                     </p>
-                    <div className="mt-8 hidden w-full  sm:flex   ">
-                      <button
-                        className=" w-full rounded-md bg-red-500  py-2   px-4 text-base font-medium text-white duration-500 
-             hover:bg-red-700 sm:w-auto "
-                      >
-                        KHÁM PHÁ NGAY
-                      </button>
+                    <div className="mt-8 hidden w-full md:block">
+                      <div className="btn-red">
+                        <a>KHÁM PHÁ NGAY</a>
+                      </div>
                     </div>
                   </div>
                 </div>

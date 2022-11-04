@@ -21,7 +21,6 @@ export default function Home() {
           <AboutUsLeaders />
           <AboutUsManagers />
           <AboutUsStats />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>

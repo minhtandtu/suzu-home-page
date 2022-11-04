@@ -165,10 +165,10 @@ export const PJDetail = () => {
           <div className="pt-5 md:pt-11">
             <Link2 href="/">
               <div className="btn-red flex items-center">
-                <p className="">
+                <a>
                   XEM SẢN PHẨM &nbsp;
                   <ArrowRightIcon className="h-6 w-6 -rotate-45" />
-                </p>
+                </a>
               </div>
             </Link2>
           </div>
@@ -305,11 +305,11 @@ export const PJDetail = () => {
         {/*BUTTON--> */}
         <div className="mx-auto flex justify-center pt-5 md:pt-11 ">
           <Link2 href="/">
-            <div className="btn-red mx-auto w-full text-center md:w-auto">
-              <p className="mx-auto">
-                <ArrowLeftIcon className="h-5 w-5" />
+            <div className="btn-red">
+              <a>
+                <ArrowLeftIcon className="mt-1 h-4 w-4" />
                 &nbsp;QUAY LẠI TRANG DỰ ÁN
-              </p>
+              </a>
             </div>
           </Link2>
         </div>

@@ -63,9 +63,9 @@
     @apply flex px-8 py-2;
   }
   .btn-red {
-    @apply inline-flex cursor-pointer rounded-lg bg-red-500 text-sm font-medium text-white transition duration-500 hover:bg-red-700 md:text-base;
+    @apply inline-flex w-full cursor-pointer justify-center rounded-lg bg-red-500 text-sm font-medium text-white transition duration-500 hover:bg-red-700 md:w-auto md:text-base;
   }
-  .btn-red p {
+  .btn-red a {
     @apply flex px-4 py-2;
   }
   .imgteam {

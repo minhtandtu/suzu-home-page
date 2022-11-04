@@ -133,7 +133,7 @@ const Footer = () => {
                   <div className="w-full pt-4">
                     <Link href="/">
                       <div className="btn-red">
-                        <p>LIÊN HỆ NGAY </p>
+                        <a>LIÊN HỆ NGAY </a>
                       </div>
                     </Link>
                   </div>

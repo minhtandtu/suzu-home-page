@@ -19,7 +19,6 @@ export default function Ourtem() {
           <TeamHero />
           <TeamInfo />
           <TeamRecruitment />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>

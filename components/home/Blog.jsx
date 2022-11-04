@@ -97,7 +97,7 @@ const Blog = () => {
         ))}
       </div>
       {/* Button */}
-      <div className="md:flex md:justify-center">
+      <div className="px-4 md:flex md:justify-center">
         <Link href={'/'}>
           <div className="group mt-7 cursor-pointer rounded-lg border border-red-500 bg-white px-4 py-2 text-center text-red-500 transition duration-500 hover:bg-red-200 md:mt-10">
             <p className="text-base font-medium group-hover:text-red-900">

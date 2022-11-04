@@ -17,7 +17,6 @@ export default function blog() {
         <main>
           <BlogHero />
           <BlogMain />
-          <ContactUsNow />
         </main>
         <Footer />
       </div>
