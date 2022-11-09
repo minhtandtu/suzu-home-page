@@ -102,11 +102,8 @@ function classNames(...classes) {
 }
 export const PJDetail = () => {
   return (
-    <div className="mx-auto py-20 2xl:container">
-      <img
-        src="/Studio/image9.png"
-        className="mt-1 w-full object-cover md:-mt-2"
-      ></img>
+    <div className="mx-auto pb-16 md:pb-24 2xl:container">
+      <img src="/Studio/image9.png" className="w-full object-cover"></img>
       <div className="bg-gray-50">
         <div className="mx-auto flex max-w-md  flex-col items-center py-8 text-base font-normal text-gray-500 md:py-11">
           <Breadcrumbs

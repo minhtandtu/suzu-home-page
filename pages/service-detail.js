@@ -1,17 +1,16 @@
 import Footer from '../components/shared/Footer';
 import {NextSeo} from 'next-seo';
 import Header from '../components/shared/Header';
-
-import {PJDetail} from '../components/studio/project-detail/PJDetail';
+import ServiceDetail from '../components/service/ServiceDetail';
 export default function Home() {
   return (
     <>
-      <NextSeo title="SuZu Group" description="Xelcome to suzu group....." />
+      <NextSeo title="SuZu's Services" description="Welcome to Suzu Group" />
       <div className="relative bg-white ">
         {/* Navigation Top Menu ----------------> */}
         <Header />
         <main>
-          <PJDetail />
+          <ServiceDetail />
         </main>
         <Footer />
       </div>

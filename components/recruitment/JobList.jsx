@@ -104,7 +104,7 @@ export const JobList = () => {
       {/* breadscrums + Tag */}
       <div className="container mx-auto px-4">
         <nav className="mb-4 flex" aria-label="Breadcrumb">
-          <ol role="list" className="flex items-end space-x-2">
+          <ol role="list" className="flex items-center space-x-2">
             <li>
               <div>
                 <a
@@ -118,9 +118,9 @@ export const JobList = () => {
             </li>
             {pages.map((page) => (
               <li key={page.name}>
-                <div className="flex items-end">
+                <div className="flex items-center">
                   <ChevronRightIcon
-                    className="h-7 w-7 flex-shrink-0 text-gray-400"
+                    className="h-5 w-5 flex-shrink-0 text-gray-400"
                     aria-hidden="true"
                   />
                   <a

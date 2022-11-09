@@ -59,6 +59,9 @@ const Fields = [
     des: ' Short Description',
   },
 ];
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 const pages = [{name: 'Service', href: '#', current: true}];
 const ServiceOurFields = () => {
   return (
@@ -67,7 +70,7 @@ const ServiceOurFields = () => {
         <div className="container mx-auto px-4">
           <div className="mb-4 md:mb-8">
             <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-end space-x-2">
+              <ol role="list" className="flex items-center space-x-2">
                 <li>
                   <Link href="/">
                     <a className="text-sm font-medium text-gray-500 hover:text-gray-500">
@@ -85,7 +88,10 @@ const ServiceOurFields = () => {
                       />
                       <a
                         href={page.href}
-                        className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
+                        className={classNames(
+                          page.current ? 'text-red-700' : 'text-gray-500',
+                          'font-inter text-sm font-medium text-gray-500 hover:text-gray-700',
+                        )}
                         aria-current={page.current ? 'page' : undefined}
                       >
                         {page.name}

@@ -54,7 +54,7 @@ export const HiringDetail = () => {
       <div className="container mx-auto max-w-7xl py-16 md:py-24">
         <div className="container mx-auto px-4 ">
           {/* Hero */}
-          <div className="pt-16">
+          <div className="">
             <Title str1={'ỨNG TUYỂN'} str2={post.department} />
             <h1 className="mb-4 text-3xl font-semibold text-gray-900 md:mb-8 md:text-5xl">
               {post.jobTitle}

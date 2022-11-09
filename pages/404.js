@@ -1,8 +1,9 @@
 import Footer from '../components/shared/Footer';
-import {NextSeo} from 'next-seo';
 import Header from '../components/shared/Header';
 
-import {PJDetail} from '../components/studio/project-detail/PJDetail';
+import {NextSeo} from 'next-seo';
+import Content404 from '../components/home/Content404';
+
 export default function Home() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function Home() {
         {/* Navigation Top Menu ----------------> */}
         <Header />
         <main>
-          <PJDetail />
+          <Content404 />
         </main>
         <Footer />
       </div>
