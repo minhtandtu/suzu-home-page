@@ -92,8 +92,8 @@ const Blog = () => {
         <Title str1={'TIN TỨC'} str2="NỔI BẬT" />
       </div>
       <div className="container mx-auto grid gap-4 px-4 lg:grid-cols-3">
-        {posts.map((item) => (
-          <BlogPost key={item.name} post={item} />
+        {posts.map((item, index) => (
+          <BlogPost key={index} post={item} />
         ))}
       </div>
       {/* Button */}
