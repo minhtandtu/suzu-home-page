@@ -82,4 +82,8 @@ module.exports = {
     require('tailwind-scrollbar-hide'),
     require('@tailwindcss/typography'),
   ],
+  compiler: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
 };

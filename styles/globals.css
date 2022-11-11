@@ -8,35 +8,12 @@
   }
 }
 @layer components {
-  /*
-  .product {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: pink;
-
-    position: relative;
-    overflow: hidden;
+  .team-images {
+    @apply hidden;
   }
-  .product-container {
-    background-color: #18f4af;
-    padding: 0.5rem;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+  .team-images.active {
+    @apply block;
   }
-  .product-card {
-    flex: 0 0 auto;
-    background-color: #e1f943;
-    width: 15rem;
-    height: 10rem;
-    margin: 0.5rem;
-  }
-  .pre-btn,
-  .nxt-btn {
-    margin-right: 0.5rem;
-    border: 1px solid gray;
-  }
-*/
   .limitline {
     overflow: hidden;
     text-overflow: ellipsis;

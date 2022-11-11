@@ -279,10 +279,7 @@ export const PJDetail = () => {
           <img
             key={index}
             src={item}
-            className={clsx(
-              'col-span-1 aspect-video w-full object-cover',
-              ColSpan(),
-            )}
+            className={clsx('aspect-video w-full object-cover', ColSpan())}
           ></img>
         ))}
       </div>
@@ -291,12 +288,8 @@ export const PJDetail = () => {
           <Title str1={'DỰ ÁN'} str2="LIÊN QUAN" />
         </div>
         <div className="mx-auto grid w-full gap-1 sm:grid-cols-2 md:grid-cols-3 md:px-1">
-          {Projects.map((project) => (
-            <ProjectItem
-              key={project}
-              project={project}
-              aspect={'aspect-4/3'}
-            />
+          {Projects.map((project, index) => (
+            <ProjectItem key={index} project={project} aspect={'aspect-4/3'} />
           ))}
         </div>
         {/*BUTTON--> */}

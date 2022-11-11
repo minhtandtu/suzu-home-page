@@ -159,7 +159,7 @@ const OurProject = () => {
       {/* Projects Slider */}
       <div className="product-container scrollbar-hide mx-auto grid h-[65rem] w-full gap-1 overflow-hidden px-4 md:h-auto md:grid-flow-col md:grid-rows-2 md:overflow-x-auto md:scroll-smooth md:px-1 2xl:container ">
         {projects.map((project, index) => (
-          <div key={index} className="w-auto md:w-96">
+          <div key={index} className="w-auto px-1 md:w-[calc(100vw/3-0.8vw)]">
             <ProjectItem project={project} aspect={'aspect-4/3'} />
           </div>
         ))}
