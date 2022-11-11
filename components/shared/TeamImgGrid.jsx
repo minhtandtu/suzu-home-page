@@ -3,7 +3,7 @@ import React from 'react';
 const TeamImgGrid = ({item}) => {
   return (
     <>
-      <div className="grid grid-cols-5">
+      <div className="grid grid-cols-5 gap-2">
         <div className="order-2 col-span-5 flex">
           <div className="col-span-3  mr-3 rounded-md">
             <img src={item[0]} alt="branchImage" />
