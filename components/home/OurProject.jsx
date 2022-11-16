@@ -112,7 +112,6 @@ const projects = [
   },
 ];
 const OurProject = () => {
-  const [scrip, setScrip] = useState();
   useEffect(() => {
     const productContainer = document.querySelector('.product-container');
     const nxtBtn = document.querySelector('.nxt-btn');
@@ -120,7 +119,6 @@ const OurProject = () => {
 
     let containerDemensions = productContainer?.getBoundingClientRect();
     let containerWidth = containerDemensions?.width;
-
     nxtBtn?.addEventListener('click', () => {
       productContainer.scrollLeft += 780;
     });

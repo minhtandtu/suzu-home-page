@@ -1,6 +1,26 @@
 import React from 'react';
 import {ArrowNarrowDownIcon} from '@heroicons/react/solid';
+import {useState, useEffect} from 'react';
+const teambranch = ['GROUP', 'MUSIC', 'BRAND', 'SOFTWARE', 'FILM', 'STUDIO'];
 const Hero = () => {
+  if (process.browser) {
+    const ref = -100 / teambranch.length;
+    const Slider = document.querySelector('.slider');
+    const ButtonRed = document.querySelector('.btn-red');
+    setInterval(() => {
+      Slider.style.transform = 'translate(0,' + ref + '%)';
+    }, 2000);
+
+    Slider.addEventListener('transitionend', function () {
+      Slider.appendChild(Slider.firstElementChild);
+      Slider.style.transition = 'none';
+      Slider.style.transform = 'translate(0,0)';
+      setTimeout(() => {
+        Slider.style.transition = 'all 0.5s';
+      });
+    });
+  }
+
   return (
     <>
       {/* Hero Section*/}
@@ -22,14 +42,31 @@ const Hero = () => {
                       </p>
                     </div>
 
-                    <div className="flex">
+                    <div className="flex h-64">
                       {/* min-w-max: khong cho xuong hang */}
-                      <p className="font-anton  min-w-max whitespace-nowrap text-left text-6xl  font-normal leading-loose text-red-500 md:text-6xl lg:text-8xl">
-                        SUZU{' '}
-                        <span className="text-stroke-2 text-stroke-red text-white">
-                          GROUP
-                        </span>
+                      <p className="font-anton min-w-max whitespace-nowrap text-left text-6xl  font-normal leading-loose text-red-500 md:text-6xl lg:text-8xl">
+                        SUZU&nbsp;
                       </p>
+                      <div className="w-full">
+                        <div className="slider-container relative h-44 overflow-hidden  md:h-52">
+                          <div className="carousel">
+                            <div className="slider transition-all duration-500 ">
+                              {teambranch.map((item, index) => (
+                                <div
+                                  key={index}
+                                  className="mb-28 flex flex-1 flex-shrink-0"
+                                >
+                                  <p className="text-stroke-2 text-stroke-red font-anton min-w-max flex-shrink-0 whitespace-nowrap text-left text-6xl font-normal leading-loose text-white md:text-6xl lg:text-8xl">
+                                    {item}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="absolute inset-x-0 -top-24 h-24 bg-gradient-to-b from-white to-transparent "></div>
+                          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
