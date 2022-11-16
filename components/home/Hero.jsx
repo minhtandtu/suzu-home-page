@@ -42,13 +42,13 @@ const Hero = () => {
                       </p>
                     </div>
 
-                    <div className="flex h-64">
+                    <div className="flex ">
                       {/* min-w-max: khong cho xuong hang */}
                       <p className="font-anton min-w-max whitespace-nowrap text-left text-6xl  font-normal leading-loose text-red-500 md:text-6xl lg:text-8xl">
                         SUZU&nbsp;
                       </p>
                       <div className="w-full">
-                        <div className="slider-container relative h-44 overflow-hidden  md:h-52">
+                        <div className="slider-container relative h-32 overflow-hidden md:h-36">
                           <div className="carousel">
                             <div className="slider transition-all duration-500 ">
                               {teambranch.map((item, index) => (
@@ -64,7 +64,7 @@ const Hero = () => {
                             </div>
                           </div>
                           <div className="absolute inset-x-0 -top-24 h-24 bg-gradient-to-b from-white to-transparent "></div>
-                          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+                          <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
                         </div>
                       </div>
                     </div>
