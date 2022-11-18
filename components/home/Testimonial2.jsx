@@ -48,7 +48,8 @@ const testimonial = [
     avatar: '/Avatar/messi.png',
     role: 'Football player',
     rating: 6,
-    comment: 'I am the King.',
+    comment:
+      'Many kids want to be a like Ronaldo, that understandable, no one can play football like Messi or Ibrahimovic',
   },
   {
     authorName: 'Luis Suares',
@@ -122,7 +123,7 @@ const Testimonial = () => {
       <div className="testimonial-container2  w-full overflow-hidden p-4">
         <div className="testimonial-carousel2 relative  h-full  ">
           <div className="absolute inset-y-0 z-10 mx-auto mb-8 flex w-full items-center">
-            <div className="mx-auto flex w-[1000px] justify-between pr-8">
+            <div className="mx-auto flex w-[1200px] justify-between ">
               <button
                 className="btn-back rounded-md bg-white px-3 py-3 shadow-lg hover:bg-gray-200"
                 onClick={() => handleClick(2)}
@@ -141,7 +142,7 @@ const Testimonial = () => {
             {arrState.map((item, index) => (
               <div
                 key={index}
-                className={`testi-slide mx-auto flex w-full max-w-sm flex-shrink-0 justify-center text-lg md:max-w-2xl ${
+                className={`testi-slide mx-auto flex w-full max-w-sm flex-shrink-0 justify-center text-lg md:max-w-4xl ${
                   index === hightlight
                     ? 'scale-100 opacity-100'
                     : ' scale-90 opacity-70 '
