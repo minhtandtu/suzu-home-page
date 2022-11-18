@@ -3,8 +3,8 @@ import Rating from '../shared/Rating';
 const TestimonialItem = ({item}) => {
   return (
     <>
-      <div className="mx-auto rounded-lg bg-white shadow-lg md:m-4">
-        <div className="flex flex-col items-center justify-center space-y-3 py-12 px-4 text-center md:px-20">
+      <div className="mx-auto h-96 w-full rounded-lg bg-white shadow-lg md:m-4">
+        <div className="flex w-full flex-col items-center justify-center space-y-3 py-12 px-4 text-center md:px-20">
           <p className="mb-8 text-xl font-normal text-gray-900 md:text-3xl">
             {item.comment}
           </p>

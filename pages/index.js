@@ -1,5 +1,6 @@
 import Hero from '../components/home/Hero';
 import Testimonial from '../components/home/Testimonial';
+import Testimonial2 from '../components/home/Testimonial2';
 import Footer from '../components/shared/Footer';
 import Header from '../components/shared/Header';
 import Customers from '../components/home/Customers';
@@ -31,7 +32,9 @@ export default function Home() {
           {/* TEAM BRANCH - ĐỘI NGŨ CỦA CHÚNG TÔI */}
           <TeamBranch />
           {/*TESTIMONIAL - ĐÁNH GIÁ TỪ KHÁCH HÀNG*/}
-          <Testimonial />
+          {/* <Testimonial /> */}
+          <Testimonial2 />
+
           {/* BLOG - TIN TỨC */}
           <Blog />
           {/*LIÊN HỆ NGAY + LOGO*/}

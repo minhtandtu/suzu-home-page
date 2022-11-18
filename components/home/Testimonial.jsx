@@ -43,7 +43,7 @@ const Testimonial = () => {
           <Splide
             options={{
               type: 'loop',
-              // padding: '15rem',
+              //  padding: '15rem',
 
               classes: {
                 pagination: 'splide__pagination pagin',
