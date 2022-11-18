@@ -59,21 +59,21 @@ const testimonial = [
       'Love the simplicity of the service and the prompt customer support. We cant imagine working without it.',
   },
 ];
-var r1 = [1, 2, 3, 4, 5, 6, 7];
-
+var hightlight = 3;
 const Testimonial = () => {
   const [arrState, setArrState] = useState(testimonial);
 
   function handleClick(direction) {
     const Test2Slider = document.querySelector('.testimonial-slider2');
+    const TesttSlide = document.querySelector('.testi-slide');
+    const SlideWidth = TesttSlide.getBoundingClientRect().width;
     if (direction === 1) {
-      Test2Slider.style.transform = 'translate(-768px)';
+      Test2Slider.style.transform = `translate(-${SlideWidth + 40}px)`;
       Test2Slider.addEventListener('transitionend', function () {
         setArrState((prevState) => [
           ...prevState.slice(1, prevState.length),
           prevState[0],
         ]);
-        console.log('State: ' + arrState);
         Test2Slider.style.transition = 'none';
         Test2Slider.style.transform = 'translate(0,0)';
         setTimeout(() => {
@@ -81,13 +81,12 @@ const Testimonial = () => {
         });
       });
     } else {
-      Test2Slider.style.transform = 'translate(768px)';
+      Test2Slider.style.transform = `translate(${SlideWidth + 40}px)`;
       Test2Slider.addEventListener('transitionend', function () {
         setArrState((prevState) => [
           prevState[prevState.length - 1],
           ...prevState.slice(0, prevState.length - 1),
         ]);
-        console.log('State: ' + arrState);
         Test2Slider.style.transition = 'none';
         Test2Slider.style.transform = 'translate(0,0)';
         setTimeout(() => {
@@ -120,8 +119,8 @@ const Testimonial = () => {
         </div>
       </div> */}
       {/*  */}
-      <div className="testimonial-container2  h-96 w-full  p-4">
-        <div className="testimonial-carousel2 relative  h-full p-4">
+      <div className="testimonial-container2  w-full overflow-hidden p-4">
+        <div className="testimonial-carousel2 relative  h-full  ">
           <div className="absolute inset-y-0 z-10 mx-auto mb-8 flex w-full items-center">
             <div className="mx-auto flex w-[1000px] justify-between pr-8">
               <button
@@ -138,13 +137,13 @@ const Testimonial = () => {
               </button>
             </div>
           </div>
-          <div className="testimonial-slider2 flex h-full w-full flex-shrink-0 items-center justify-center transition-all duration-500">
+          <div className="testimonial-slider2 flex h-full w-auto flex-shrink-0 items-center justify-center transition-all duration-500 md:w-full">
             {arrState.map((item, index) => (
               <div
                 key={index}
-                className={`mx-auto flex w-[768px] flex-shrink-0 justify-center text-lg ${
-                  index === 3
-                    ? 'scale-105 opacity-100'
+                className={`testi-slide mx-auto flex w-full max-w-sm flex-shrink-0 justify-center text-lg md:max-w-2xl ${
+                  index === hightlight
+                    ? 'scale-100 opacity-100'
                     : ' scale-90 opacity-70 '
                 }`}
               >
