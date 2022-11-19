@@ -1,6 +1,5 @@
 import React from 'react';
 import {ArrowNarrowDownIcon} from '@heroicons/react/solid';
-import {useState, useEffect} from 'react';
 const teambranch = ['GROUP', 'MUSIC', 'BRAND', 'SOFTWARE', 'FILM', 'STUDIO'];
 const Hero = () => {
   if (process.browser) {

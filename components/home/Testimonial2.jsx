@@ -63,12 +63,15 @@ const testimonial = [
 var hightlight = 3;
 const Testimonial = () => {
   const [arrState, setArrState] = useState(testimonial);
+  const [count, setCount] = useState(0);
 
   function handleClick(direction) {
     const Test2Slider = document.querySelector('.testimonial-slider2');
     const TesttSlide = document.querySelector('.testi-slide');
     const SlideWidth = TesttSlide.getBoundingClientRect().width;
     if (direction === 1) {
+      count < arrState.length - 1 ? setCount(count + 1) : setCount(0);
+
       Test2Slider.style.transform = `translate(-${SlideWidth + 40}px)`;
       Test2Slider.addEventListener('transitionend', function () {
         setArrState((prevState) => [
@@ -82,6 +85,8 @@ const Testimonial = () => {
         });
       });
     } else {
+      count > 0 ? setCount(count - 1) : setCount(arrState.length - 1);
+
       Test2Slider.style.transform = `translate(${SlideWidth + 40}px)`;
       Test2Slider.addEventListener('transitionend', function () {
         setArrState((prevState) => [
@@ -98,7 +103,7 @@ const Testimonial = () => {
   }
 
   return (
-    <div className="bg-gray-50 py-16 md:py-24">
+    <div className="relative bg-gray-50 py-16 md:py-24">
       {console.log('RenderUI')}
       {/* Đánh Giá Từ Khách Hàng */}
       <div className="flex flex-col items-center justify-center">
@@ -120,8 +125,9 @@ const Testimonial = () => {
         </div>
       </div> */}
       {/*  */}
-      <div className="testimonial-container2  w-full overflow-hidden p-4">
-        <div className="testimonial-carousel2 relative  h-full  ">
+      <div className="testimonial-container2 w-full overflow-hidden p-4">
+        <div className="testimonial-carousel2 relative h-full  ">
+          {/* Slider Buttons */}
           <div className="absolute inset-y-0 z-10 mx-auto mb-8 flex w-full items-center">
             <div className="mx-auto flex w-[1200px] justify-between ">
               <button
@@ -152,6 +158,19 @@ const Testimonial = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      {/* Slider Tracker */}
+      <div className="slider-tracker absolute inset-x-0 bottom-0 z-10 mx-auto mb-8 flex w-full items-center">
+        <div className="mx-auto flex w-full items-center justify-center px-4">
+          {arrState.map((itm, idx) => (
+            <div
+              key={idx}
+              className={`mr-4 h-2 w-[calc(80vw/7)] max-w-[80px] rounded-full ${
+                count == idx ? 'bg-red-700' : 'bg-gray-200'
+              } shadow-md`}
+            ></div>
+          ))}
         </div>
       </div>
     </div>
