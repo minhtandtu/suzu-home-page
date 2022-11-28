@@ -9,106 +9,106 @@ const projects = [
   {
     name: 'YÊU THƯƠNG TIẾP NỐI',
     description: 'Music video, Digital Graphic, Marketing',
-    branch: 'ZALOPAY',
-    imageSrc: '/Project/yeuthuongtiepnoi.png',
+    client: 'ZALOPAY',
+    featureImage: '/Project/yeuthuongtiepnoi.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'ĐIỀU NHỎ BÉ VĨ ĐẠI',
     description: 'Visual, Animation, Marketing',
-    branch: 'MOMO',
-    imageSrc: '/Project/dieunhobevidai.png',
+    client: 'MOMO',
+    featureImage: '/Project/dieunhobevidai.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'MUỘN MÀNG LÀ TỪ LÚC ',
     description: 'Music video, Digital graphic, Marketing.',
-    branch: 'MỸ TÂM',
-    imageSrc: '/Project/muonmanglatuluc.png',
+    client: 'MỸ TÂM',
+    featureImage: '/Project/muonmanglatuluc.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'MERRY CHRISTMAS',
     description: 'Info graphic, Event, Marketing',
-    branch: 'VIMCOM CENTER',
-    imageSrc: '/Project/merrychristmas.png',
+    client: 'VIMCOM CENTER',
+    featureImage: '/Project/merrychristmas.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'LÁ CỜ',
     description: 'Info graphic, Event, Marketingg',
-    branch: 'BÁO TUỔI TRẺ',
-    imageSrc: '/Project/laco.png',
+    client: 'BÁO TUỔI TRẺ',
+    featureImage: '/Project/laco.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'BAO LẦN YÊU CHO VỪA',
     description: 'Info graphic, Event, Marketing',
-    branch: 'SUZU GROUP',
-    imageSrc: '/Project/baolanyeuchovua.png',
+    client: 'SUZU GROUP',
+    featureImage: '/Project/baolanyeuchovua.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'YÊU THƯƠNG TIẾP NỐI',
     description: 'Music video, Digital Graphic, Marketing',
-    branch: 'ZALOPAY',
-    imageSrc: '/Project/yeuthuongtiepnoi.png',
+    client: 'ZALOPAY',
+    featureImage: '/Project/yeuthuongtiepnoi.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'ĐIỀU NHỎ BÉ VĨ ĐẠI',
     description: 'Visual, Animation, Marketing',
-    branch: 'MOMO',
-    imageSrc: '/Project/dieunhobevidai.png',
+    client: 'MOMO',
+    featureImage: '/Project/dieunhobevidai.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'MUỘN MÀNG LÀ TỪ LÚC ',
     description: 'Music video, Digital graphic, Marketing.',
-    branch: 'MỸ TÂM',
-    imageSrc: '/Project/muonmanglatuluc.png',
+    client: 'MỸ TÂM',
+    featureImage: '/Project/muonmanglatuluc.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'MERRY CHRISTMAS',
     description: 'Info graphic, Event, Marketing',
-    branch: 'VIMCOM CENTER',
-    imageSrc: '/Project/merrychristmas.png',
+    client: 'VIMCOM CENTER',
+    featureImage: '/Project/merrychristmas.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'LÁ CỜ',
     description: 'Info graphic, Event, Marketingg',
-    branch: 'BÁO TUỔI TRẺ',
-    imageSrc: '/Project/laco.png',
+    client: 'BÁO TUỔI TRẺ',
+    featureImage: '/Project/laco.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    href: '/project-detail',
   },
   {
     name: 'BAO LẦN YÊU CHO VỪA',
     description: 'Info graphic, Event, Marketing',
-    branch: 'SUZU GROUP',
-    imageSrc: '/Project/baolanyeuchovua.png',
+    client: 'SUZU GROUP',
+    featureImage: '/Project/baolanyeuchovua.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    href: '/project-detail',
   },
 ];
 const OurProject = () => {
@@ -162,16 +162,10 @@ const OurProject = () => {
           </div>
         ))}
       </div>
-      {/* Ảnh */}
-      {/* <div className="mx-auto grid w-full gap-1 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-1 2xl:container">
-        {projects.map((project) => (
-          <ProjectItem key={project} project={project} aspect={'aspect-4/3'} />
-        ))}
-      </div> */}
 
       {/* Tim hieu them */}
       <div className="m-4 h-[122px] rounded border-2 border-gray-700 p-4 md:hidden">
-        <Link href="/">
+        <Link href="/portfolio">
           <a className="cursor-pointer">
             <div className="text-left text-2xl font-bold text-gray-700">
               XEM THÊM DỰ ÁN

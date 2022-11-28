@@ -1,6 +1,7 @@
 import React from 'react';
 import {ChevronRightIcon, ArrowRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
+import {Breadscrumb} from '../shared/Breadscrumb';
 const teaminfo = [
   {
     name: 'SuZu Studio',
@@ -78,35 +79,7 @@ const TeamInfo = () => {
         {/* Scrum Section */}
         <div className="container mx-auto px-4">
           <div className="md:mb-8">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
-                <li>
-                  <Link href="/">
-                    <a className="text-sm font-medium text-gray-500 hover:text-gray-500">
-                      Trang chủ
-                      <span className="sr-only">Home</span>
-                    </a>
-                  </Link>
-                </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-end">
-                      <ChevronRightIcon
-                        className="h-7 w-7 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
+            <Breadscrumb pages={pages} />
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import {ChevronRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
 import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
+import {Breadscrumb} from '../../shared/Breadscrumb';
+
 const pages = [
   {name: 'Đội ngũ', href: '#', current: false},
   {name: 'Suzu Studio', href: '#', current: false},
@@ -142,43 +144,7 @@ const Projects = () => {
       <div className="container mx-auto max-w-7xl ">
         {/* breadscrums + Tag + Combobox */}
         <div className="container mx-auto px-4">
-          <div className="">
-            <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-end space-x-2">
-                <li>
-                  <div>
-                    <a
-                      href="#"
-                      className="text-xs font-medium text-gray-500 hover:text-gray-500 md:text-sm"
-                    >
-                      Trang chủ
-                      <span className="sr-only">Home</span>
-                    </a>
-                  </div>
-                </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-center">
-                      <ChevronRightIcon
-                        className="h-5 w-5 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className={classNames(
-                          page.current ? 'text-red-700' : 'text-gray-500',
-                          'ml-2 text-xs font-medium text-gray-500 hover:text-red-700 md:ml-4 md:text-sm',
-                        )}
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          </div>
+          <Breadscrumb pages={pages} />
           {/*  Tag + Combobox */}
           <div className="flex items-center">
             <div className="mr-4 flex-1">

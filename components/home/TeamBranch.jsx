@@ -117,12 +117,16 @@ const linhvuc = [
 ];
 const TeamBranch = () => {
   const [branch, setBranch] = useState(0);
-  if (process.browser) {
-    const listImages = document.querySelectorAll('.team-images');
+
+  useEffect(() => {
+    const listImages = document.querySelectorAll('.team-images-mobile');
     const images = listImages[branch];
-    document.querySelector('.team-images.active')?.classList.remove('active');
+    document
+      .querySelector('.team-images-mobile.active')
+      ?.classList.remove('active');
     images.classList.add('active');
-  }
+  }, [branch]);
+
   return (
     <div className="container mx-auto max-w-7xl py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -132,9 +136,9 @@ const TeamBranch = () => {
           {/* Team List and Images */}
           {/* List SECTION & Button*/}
           <div className="col-span-1 flex flex-col items-center justify-between space-y-2 md:col-span-4 xl:space-y-6">
-            {/* List Items */}
+            {/* List  */}
             <div className="flex w-full flex-col justify-between space-y-2 ">
-              {/* List item */}
+              {/*item */}
               {branchName.map((item, index) => (
                 <div key={index}>
                   <div
@@ -180,8 +184,8 @@ const TeamBranch = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="team-images ">
-                    <div className="md:hidden">
+                  <div className="team-images-mobile">
+                    <div className="mt-2 md:hidden">
                       <TeamImgGrid item={branchName[index].images} />
                     </div>
                   </div>
@@ -190,7 +194,7 @@ const TeamBranch = () => {
             </div>
 
             <div className="w-full flex-1">
-              <Link href="#">
+              <Link href="/ourteam">
                 <div className="group  flex cursor-pointer items-center justify-center rounded-lg border border-red-500 bg-white px-1 text-red-500 transition duration-500 hover:bg-gray-100 ">
                   <a className="py-4 text-sm font-medium group-hover:text-gray-900 lg:text-lg">
                     KHÁM PHÁ ĐỘI NGŨ CỦA CHÚNG TÔI &rarr;
@@ -199,8 +203,8 @@ const TeamBranch = () => {
               </Link>
             </div>
           </div>
-          {/* Image SECTION---> */}
-          <div className=" col-span-1 hidden md:col-span-6 md:block">
+          {/* Image SECTION (Desktop Version)---> */}
+          <div className="col-span-1 hidden md:col-span-6 md:block">
             <TeamImgGrid item={branchName[branch].images} />
           </div>
         </div>

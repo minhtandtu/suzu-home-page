@@ -1,7 +1,7 @@
 import React from 'react';
 import {ChevronRightIcon, ArrowRightIcon} from '@heroicons/react/solid';
-import {Breadcrumbs, Link} from '@mui/material';
-import Link2 from 'next/link';
+import Link from 'next/link';
+import {Breadscrumb} from '../shared/Breadscrumb';
 import BlogPost from '../shared/BlogPost';
 const pages = [
   {name: 'Suzu Group', href: '#', current: false},
@@ -138,38 +138,7 @@ export const BlogDetail = () => {
     <div className="container mx-auto pt-16 md:pt-24">
       <div className="container mx-auto ">
         <div className="mx-auto flex flex-col items-center px-4 pb-16 md:pb-24">
-          <Breadcrumbs
-            aria-label="breadcrumb"
-            separator={
-              <ChevronRightIcon
-                className="h-5 w-5 flex-shrink-0 text-gray-400"
-                aria-hidden="true"
-              />
-            }
-            maxItems={3}
-            itemsAfterCollapse={2}
-          >
-            <Link
-              className="font-inter text-sm font-medium text-gray-500 hover:text-gray-700"
-              underline="none"
-              href="/"
-            >
-              Trang chủ
-            </Link>
-            {pages.map((item, index) => (
-              <Link
-                underline="none"
-                href={item.href}
-                className={classNames(
-                  item.current ? 'text-red-700' : 'text-gray-500',
-                  'font-inter text-sm font-medium text-gray-500 hover:text-gray-700',
-                )}
-                key={index}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </Breadcrumbs>
+          <Breadscrumb pages={pages} />
           {/* Blog Excerpt */}
           <div className="py-10 text-center text-sm font-semibold text-gray-500 md:text-base">
             <span>Published &nbsp;</span>
@@ -320,14 +289,14 @@ export const BlogDetail = () => {
             <p className=" pb-4 text-2xl font-normal tracking-tight text-gray-700 md:text-3xl">
               Bài viết được mọi người cùng quan tâm
             </p>
-            <Link2 href="#">
+            <Link href="#">
               <div className="hidden w-full cursor-pointer justify-center rounded-lg bg-red-500 text-sm font-medium text-white transition duration-500 hover:bg-red-700 md:inline-flex md:w-auto md:text-base">
                 <a className="flex items-center px-4 py-2">
                   XEM TOÀN BỘ BÀI VIẾT &nbsp;
                   <ArrowRightIcon className="h-5 w-5 -rotate-45" />
                 </a>
               </div>
-            </Link2>
+            </Link>
           </div>
           <div className="w-full ">
             <BlogPost post={specialpost[0]} />
@@ -337,14 +306,14 @@ export const BlogDetail = () => {
           </div>
         </div>
         <div className="px-4">
-          <Link2 href="#">
+          <Link href="#">
             <div className="btn-red mt-4 md:hidden ">
               <a className="flex items-center">
                 XEM TOÀN BỘ BÀI VIẾT &nbsp;
                 <ArrowRightIcon className="h-5 w-5 -rotate-45" />
               </a>
             </div>
-          </Link2>
+          </Link>
         </div>
       </div>
     </div>

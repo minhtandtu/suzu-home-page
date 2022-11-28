@@ -7,8 +7,7 @@ import {
 import TitleNoDash from '../shared/TitleNoDash';
 import Link from 'next/link';
 import {useState} from 'react';
-import {Fragment} from 'react';
-import {Dialog, Transition} from '@headlessui/react';
+import {Breadscrumb} from '../shared/Breadscrumb';
 
 const pages = [
   {name: 'Dịch vụ', href: '#', current: false},
@@ -317,41 +316,7 @@ const ServiceDetail = () => {
             )}
           </div>
           {/* Breadcrumb */}
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol role="list" className="flex items-center space-x-2">
-              <li>
-                <div>
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-500 hover:text-gray-500"
-                  >
-                    Trang chủ
-                    <span className="sr-only">Home</span>
-                  </a>
-                </div>
-              </li>
-              {pages.map((page, index) => (
-                <li key={index}>
-                  <div className="flex items-center">
-                    <ChevronRightIcon
-                      className="h-5 w-5 flex-shrink-0 text-gray-400"
-                      aria-hidden="true"
-                    />
-                    <a
-                      href={page.href}
-                      className={classNames(
-                        page.current ? 'text-red-700' : 'text-gray-500',
-                        'font-inter text-sm font-medium text-gray-500 hover:text-gray-700',
-                      )}
-                      aria-current={page.current ? 'page' : undefined}
-                    >
-                      {page.name}
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </nav>
+          <Breadscrumb pages={pages} />
         </div>
         <div className="grid gap-8  md:grid-cols-10  ">
           <div

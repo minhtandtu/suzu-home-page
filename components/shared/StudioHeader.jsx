@@ -135,6 +135,7 @@ export const StudioHeader = () => {
                   </Popover.Button>
                 </div>
               </div>
+              {/* Studio Pages */}
               <div className="mx-auto items-center whitespace-nowrap md:-mt-8 md:flex ">
                 <div className="mx-auto flex items-center justify-between md:inline-flex">
                   {pages.map((item) => (
@@ -147,18 +148,19 @@ export const StudioHeader = () => {
                         'w-full border-b ',
                       )}
                     >
-                      <a
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'border-red-500 text-red-500'
-                            : 'border-transparent text-gray-100 group-hover:text-red-500',
-                          ' inline-flex items-center border-b px-4 pt-1 text-sm font-medium md:text-base',
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a
+                          className={classNames(
+                            item.current
+                              ? 'border-red-500 text-red-500'
+                              : 'border-transparent text-gray-100 group-hover:text-red-500',
+                            ' inline-flex items-center border-b px-4 pt-1 text-sm font-medium md:text-base',
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -206,21 +208,22 @@ export const StudioHeader = () => {
                       </Popover.Button>
                     </div>
                   </div>
+                  {/* Menu */}
                   <div className="pt-5 pb-4 md:flex md:justify-between md:pt-0">
                     <div className="cursor-pointer  px-2 md:px-0">
                       <Link href="/">
-                        <p className="inline-flex cursor-pointer border-b-2 border-red-500 px-4 text-4xl font-semibold leading-10 text-red-500 ">
+                        <a className="inline-flex cursor-pointer border-b-2 border-red-500 px-4 text-4xl font-semibold leading-10 text-red-500 ">
                           Trang chủ
-                        </p>
+                        </a>
                       </Link>
                       {navigation.map((item) => (
                         <div key={item.name} className="cursor-pointer">
                           <Link href={item.href}>
                             <div className="group flex  items-center">
                               <div className="-translate-x-9 opacity-0 transition-all group-hover:translate-x-5 group-hover:opacity-100 group-hover:delay-75 group-hover:duration-500">
-                                <p className="text-stroke-1 text-stroke-black px-4 text-xl font-semibold text-white">
+                                <a className="text-stroke-1 text-stroke-black px-4 text-xl font-semibold text-white">
                                   {item.id}
-                                </p>
+                                </a>
                               </div>
                               <div className=" -translate-x-9 cursor-pointer transition-all ease-in-out group-hover:translate-x-5 group-hover:duration-500">
                                 <a className="block rounded-md px-4 py-2 text-4xl font-semibold leading-10 text-gray-900 md:px-0">
@@ -234,34 +237,31 @@ export const StudioHeader = () => {
                     </div>
 
                     <div className="hidden w-1/4 flex-col justify-between md:flex">
-                      <div></div>
-                      <div>
-                        <div className="">
-                          {contact.map((item) => (
-                            <p
-                              key={item.property}
-                              className="p-3 text-base font-semibold text-gray-500"
-                            >
-                              {item.property} : {item.content}
-                            </p>
-                          ))}
-                        </div>
+                      <div className="">
+                        {contact.map((item) => (
+                          <p
+                            key={item.property}
+                            className="p-3 text-base font-semibold text-gray-500"
+                          >
+                            {item.property} : {item.content}
+                          </p>
+                        ))}
+                      </div>
 
-                        <div className="flex space-x-6 ">
-                          {socialLogo.social.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="text-gray-400 hover:text-gray-500"
-                            >
-                              <span className="sr-only">{item.name}</span>
-                              <item.icon
-                                className="ml-4 h-7 w-7"
-                                aria-hidden="true"
-                              />
-                            </a>
-                          ))}
-                        </div>
+                      <div className="flex space-x-6 ">
+                        {socialLogo.social.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="text-gray-400 hover:text-gray-500"
+                          >
+                            <span className="sr-only">{item.name}</span>
+                            <item.icon
+                              className="ml-4 h-7 w-7"
+                              aria-hidden="true"
+                            />
+                          </a>
+                        ))}
                       </div>
                     </div>
                     <div className="pt-20 md:hidden">

@@ -129,9 +129,9 @@ const Footer = () => {
                       Hãy cho chúng tôi biết về dự án của bạn nhé.
                     </p>
                   </div>
-                  {/* Ứng tuyển ngay --> */}
+                  {/* LIÊN HỆ NGAY --> */}
                   <div className="w-full pt-4">
-                    <Link href="/">
+                    <Link href="/contact">
                       <div className="btn-red">
                         <a>LIÊN HỆ NGAY </a>
                       </div>

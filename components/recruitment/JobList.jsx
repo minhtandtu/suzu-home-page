@@ -2,6 +2,7 @@ import React from 'react';
 import {ChevronRightIcon, ArrowRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
 import {ClockIcon} from '@heroicons/react/outline';
+import {Breadscrumb} from '../shared/Breadscrumb';
 const pages = [
   {name: 'Tuyển dụng', href: '#', current: true},
   // {name: 'Project Nero', href: '#', current: false},
@@ -103,38 +104,7 @@ export const JobList = () => {
     <div className="container mx-auto max-w-7xl py-16 md:py-24 ">
       {/* breadscrums + Tag */}
       <div className="container mx-auto px-4">
-        <nav className="mb-4 flex" aria-label="Breadcrumb">
-          <ol role="list" className="flex items-center space-x-2">
-            <li>
-              <div>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-500"
-                >
-                  Trang chủ
-                  <span className="sr-only">Home</span>
-                </a>
-              </div>
-            </li>
-            {pages.map((page) => (
-              <li key={page.name}>
-                <div className="flex items-center">
-                  <ChevronRightIcon
-                    className="h-5 w-5 flex-shrink-0 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  <a
-                    href={page.href}
-                    className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
-                    aria-current={page.current ? 'page' : undefined}
-                  >
-                    {page.name}
-                  </a>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </nav>
+        <Breadscrumb pages={pages} />
         {/*  Label +combobox + List */}
         <div className="grid md:grid-cols-10">
           {/* BoxText */}

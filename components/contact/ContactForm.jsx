@@ -1,5 +1,5 @@
 import React from 'react';
-import {ChevronRightIcon} from '@heroicons/react/solid';
+import {Breadscrumb} from '../shared/Breadscrumb';
 import TitleNoDash from '../shared/TitleNoDash';
 
 const pages = [
@@ -12,37 +12,7 @@ export const ContactForm = () => {
       <div className="container mx-auto flex">
         <div className="w-full px-4 md:max-w-sm lg:max-w-lg">
           <div className="mb-0 md:mb-14">
-            <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex space-x-2">
-                <li>
-                  <div>
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-gray-500 hover:text-gray-500"
-                    >
-                      Trang chủ
-                    </a>
-                  </div>
-                </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-center">
-                      <ChevronRightIcon
-                        className="h-7 w-7 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
+            <Breadscrumb pages={pages} />
           </div>
           <TitleNoDash str1={'LIÊN HỆ'} str2="VỚI CHÚNG TÔI" />
           <p className="mb-9 text-sm font-normal text-gray-500 md:mb-14 md:text-xl">

@@ -104,7 +104,6 @@ const Testimonial = () => {
 
   return (
     <div className="relative bg-gray-50 py-16 md:py-24">
-      {console.log('RenderUI')}
       {/* Đánh Giá Từ Khách Hàng */}
       <div className="flex flex-col items-center justify-center">
         <Title str1={'ĐÁNH GIÁ TỪ'} str2={'KHÁCH HÀNG'} />

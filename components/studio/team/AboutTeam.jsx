@@ -1,6 +1,8 @@
 import React from 'react';
 import {ChevronRightIcon} from '@heroicons/react/solid';
 import Title from '../../shared/Title';
+import {Breadscrumb} from '../../shared/Breadscrumb';
+
 const leaders = [
   {
     name: 'Olivia Rhye',
@@ -58,42 +60,7 @@ const AboutTeam = () => {
     py-16 px-4 md:py-24"
       >
         <div className="container max-w-3xl space-y-5 md:space-y-8">
-          <nav className="hidden md:flex" aria-label="Breadcrumb">
-            <ol role="list" className="flex items-center space-x-4">
-              <li>
-                <div>
-                  <a href="#" className="text-gray-400 hover:text-red-700">
-                    Trang chủ
-                    {/* <HomeIcon
-                    className="h-5 w-5 flex-shrink-0"
-                    aria-hidden="true"
-                  /> */}
-                    <span className="sr-only">Home</span>
-                  </a>
-                </div>
-              </li>
-              {pages.map((page) => (
-                <li key={page.name}>
-                  <div className="flex items-center">
-                    <ChevronRightIcon
-                      className="h-5 w-5 flex-shrink-0 text-gray-400"
-                      aria-hidden="true"
-                    />
-                    <a
-                      href={page.href}
-                      className={classNames(
-                        page.current ? 'text-red-700' : 'text-gray-500',
-                        'ml-4 text-sm font-medium text-gray-500 hover:text-red-700',
-                      )}
-                      aria-current={page.current ? 'page' : undefined}
-                    >
-                      {page.name}
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </nav>
+          <Breadscrumb pages={pages} />
           <h1 className="text-xl font-semibold tracking-tight text-gray-700 md:text-4xl">
             Về đội ngũ chúng tôi
           </h1>

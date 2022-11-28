@@ -1,15 +1,15 @@
 import React from 'react';
 import {ArrowNarrowDownIcon} from '@heroicons/react/solid';
+import {useEffect} from 'react';
 const teambranch = ['GROUP', 'MUSIC', 'BRAND', 'SOFTWARE', 'FILM', 'STUDIO'];
 const Hero = () => {
-  if (process.browser) {
-    const ref = -100 / teambranch.length;
-    const Slider = document.querySelector('.slider');
+  const ref = -100 / teambranch.length;
+  useEffect(() => {
+    const Slider = document.querySelector('.home-slider');
     const ButtonRed = document.querySelector('.btn-red');
     setInterval(() => {
       Slider.style.transform = 'translate(0,' + ref + '%)';
     }, 2000);
-
     Slider.addEventListener('transitionend', function () {
       Slider.appendChild(Slider.firstElementChild);
       Slider.style.transition = 'none';
@@ -18,8 +18,7 @@ const Hero = () => {
         Slider.style.transition = 'all 0.5s';
       });
     });
-  }
-
+  }, []);
   return (
     <>
       {/* Hero Section*/}
@@ -49,7 +48,7 @@ const Hero = () => {
                       <div className="w-full">
                         <div className="slider-container relative h-32 overflow-hidden md:h-36">
                           <div className="carousel">
-                            <div className="slider transition-all duration-500 ">
+                            <div className="home-slider transition-all duration-500 ">
                               {teambranch.map((item, index) => (
                                 <div
                                   key={index}

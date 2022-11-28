@@ -5,13 +5,11 @@ import {
   ArrowRightIcon,
 } from '@heroicons/react/solid';
 import Link from 'next/link';
+import {Breadscrumb} from '../../shared/Breadscrumb';
 const pages = [
   {name: 'Đội ngũ', href: '#', current: false},
   {name: 'Suzu Studio', href: '#', current: true},
 ];
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 const StudioInfo = () => {
   return (
     <div
@@ -19,42 +17,7 @@ const StudioInfo = () => {
     py-16 px-4 md:py-24"
     >
       <div className="space-y-5 md:space-y-8">
-        <nav className="flex" aria-label="Breadcrumb">
-          <ol role="list" className="flex items-center space-x-4">
-            <li>
-              <div>
-                <a href="#" className="text-gray-400 hover:text-red-700">
-                  Trang chủ
-                  {/* <HomeIcon
-                    className="h-5 w-5 flex-shrink-0"
-                    aria-hidden="true"
-                  /> */}
-                  <span className="sr-only">Home</span>
-                </a>
-              </div>
-            </li>
-            {pages.map((page) => (
-              <li key={page.name}>
-                <div className="flex items-center">
-                  <ChevronRightIcon
-                    className="h-5 w-5 flex-shrink-0 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  <a
-                    href={page.href}
-                    className={classNames(
-                      page.current ? 'text-red-700' : 'text-gray-500',
-                      'ml-4 text-sm font-medium text-gray-500 hover:text-red-700',
-                    )}
-                    aria-current={page.current ? 'page' : undefined}
-                  >
-                    {page.name}
-                  </a>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </nav>
+        <Breadscrumb pages={pages} />
         <h1 className="text-xl font-semibold tracking-tight text-gray-700 md:text-4xl">
           SuZu Studio là studio mỹ thuật, chuyên về truyện tranh và hoạt hình.
         </h1>

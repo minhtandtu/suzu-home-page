@@ -8,10 +8,10 @@
   }
 }
 @layer components {
-  .team-images {
+  .team-images-mobile {
     @apply hidden;
   }
-  .team-images.active {
+  .team-images-mobile.active {
     @apply block;
   }
   .limitline {

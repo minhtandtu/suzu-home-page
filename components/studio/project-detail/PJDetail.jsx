@@ -2,7 +2,6 @@ import React from 'react';
 import {Disclosure, Transition} from '@headlessui/react';
 import {
   ChevronRightIcon,
-  HomeIcon,
   ArrowRightIcon,
   ArrowLeftIcon,
 } from '@heroicons/react/solid';

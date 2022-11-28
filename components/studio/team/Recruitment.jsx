@@ -183,9 +183,9 @@ export const Recruitment = () => {
             {/*  */}
             {recruitPost.map((item, index) => (
               <div className="grid md:grid-cols-3" key={index}>
-                <div className="bdd bg-red-300"></div>
+                <div className=""></div>
                 <div className="bg-white py-4 md:col-span-2">
-                  <div className="rounded-lg bg-gray-100 px-4 py-2">
+                  <div className="rounded-lg bg-gray-100 p-4 md:p-8">
                     <div className="flex justify-between">
                       <p className="text-xs font-semibold text-red-700 md:text-sm">
                         {item.department}
@@ -243,7 +243,7 @@ export const Recruitment = () => {
       </div>
       <div className="mx-auto pt-16 md:pt-24 2xl:container">
         <img
-          src="/Studio/image8.png"
+          src="/Studio/Image8.png"
           className="h-full w-full object-cover"
         ></img>
       </div>

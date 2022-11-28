@@ -1,6 +1,7 @@
 import React from 'react';
 import {ChevronRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
+import {Breadscrumb} from '../shared/Breadscrumb';
 import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
 const Fields = [
   {
@@ -69,38 +70,7 @@ const ServiceOurFields = () => {
       <div className="container mx-auto mb-10 max-w-7xl">
         <div className="container mx-auto px-4">
           <div className="mb-4 md:mb-8">
-            <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
-                <li>
-                  <Link href="/">
-                    <a className="text-sm font-medium text-gray-500 hover:text-gray-500">
-                      Trang chủ
-                      <span className="sr-only">Home</span>
-                    </a>
-                  </Link>
-                </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-center">
-                      <ChevronRightIcon
-                        className="h-7 w-7 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className={classNames(
-                          page.current ? 'text-red-700' : 'text-gray-500',
-                          'font-inter text-sm font-medium text-gray-500 hover:text-gray-700',
-                        )}
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
+            <Breadscrumb pages={pages} />
           </div>
 
           <div className="flex flex-col justify-between md:flex-row">

@@ -1,7 +1,7 @@
 import React from 'react';
 import {ChevronRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
-import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
+import {Breadscrumb} from '../shared/Breadscrumb';
 const pages = [{name: 'Khách hàng', href: '#', current: true}];
 const ClientInfo = () => {
   return (
@@ -9,35 +9,7 @@ const ClientInfo = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="container mx-auto px-4">
           <div className=" mb-4 md:mb-8">
-            <nav className="mb-4 flex" aria-label="Breadcrumb">
-              <ol role="list" className="flex items-center space-x-2">
-                <li>
-                  <Link href="/">
-                    <a className="text-sm font-medium text-gray-500 hover:text-gray-500">
-                      Trang chủ
-                      <span className="sr-only">Home</span>
-                    </a>
-                  </Link>
-                </li>
-                {pages.map((page) => (
-                  <li key={page.name}>
-                    <div className="flex items-end">
-                      <ChevronRightIcon
-                        className="h-6 w-6 flex-shrink-0 text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <a
-                        href={page.href}
-                        className="ml-2 text-sm font-medium text-red-700 hover:text-gray-900"
-                        aria-current={page.current ? 'page' : undefined}
-                      >
-                        {page.name}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </nav>
+            <Breadscrumb pages={pages} />
           </div>
           <p className=" mb-4 text-xl font-semibold text-gray-700 md:mb-6 md:text-3xl">
             Sự kết nối

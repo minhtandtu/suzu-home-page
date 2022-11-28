@@ -1,8 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {ChevronRightIcon} from '@heroicons/react/solid';
 import Link from 'next/link';
-import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/solid';
 const portfolioProjects = [
   {
     name: 'YÊU THƯƠNG TIẾP NỐI',
@@ -101,9 +99,7 @@ const portfolioProjects = [
     href: '#',
   },
 ];
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+
 var i = 1;
 var j = 0;
 var a = false;
